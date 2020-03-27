@@ -540,7 +540,6 @@ section.slideshow.ng-scope {
   padding: 1em;
   width: auto;
   background: white;
-  height: 100vh;
   display: block;
 }
 
@@ -566,11 +565,11 @@ section.slideshow.ng-scope {
   border-left: thick solid #ff0000;
 }
 #ten {
-  position: relative;
-  float: left;
+  position: absolute;
   display: flex;
-  margin-top: 13vh;
   overflow: auto;
+  height: 40vw;
+  width: 25vw;
 }
 .slideshow-button.slideshow-black.slideshow-display-left,
 .slideshow-button.slideshow-black.slideshow-display-right{
@@ -1260,4 +1259,15 @@ div#nav {position: fixed;display: flex;top: 20vh;}
 .AppElement {
   font-size: 2em;
   text-align: center;
+}
+
+
+.Description-Section {
+  grid-column: 1/7;
+  grid-row: 2/12;
+}
+
+.Slideshow-Images-Section {
+  grid-column: 7/23;
+  grid-row: 2/12;
 }

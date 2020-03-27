@@ -104,33 +104,102 @@
 
             <div></div>
 
-            <div class="our-pixels">
+            <div class="Description-Section">
 
-                <div class="our-pixels-images">
-
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.01 90">
-                        <title>noun_happy face_1101107</title>
-                        <path d="M10,60H0V30H10Zm0-30V20H20V30Zm0,40V60H20V70ZM20,20V10H30V20Zm0,60V70H30V80ZM30,10V0H40V10Zm0,50V50H40V60Zm0,30V80H40V90ZM40,40V30H50V40Zm0,30V60H50V70ZM50,10V0H60V10ZM80,70H60V60H80ZM60,90V80H70V90ZM70,40V30H80V40ZM80,10V0H90V10Zm0,50V50H90V60Zm0,30V80H90V90ZM90,20V10h10V20Zm0,60V70h10V80Zm10-50V20h10V30Zm0,40V60h10V70Zm20-40V60H110V30Z"></path>
-                    </svg>
+                <div class="slideshow ng-scope" ng-app="app" ng-controller="MainController">
+                    <a id="top"></a>
+                    <div id='main'>
+                        <section id='ten'>
+                            <div class='pane' ng-repeat='change in images track by $index' ng-class="{ 'active' : $index == active }" ng-if="$index == active">
+                                <div class="processs_desc">
+                                    <h2>{{ change.name }}</h2>
+                                    <h2>{{ change.desc }}</h2>
+                                    <p>{{ change.sec }}</p>
+                                    <p>{{ change.img }}</p>
+    
+                                </div>
+                            </div>
+                        </section>
+                        <nav id="nav" class="pointer1">
+                            <ul>
+                                <li class="previous">
+                                    <a href="#section1" ng-click="previous()">Process
+    
+                        </a>
+                                </li>
+    
+                                <li class="next">
+                                    <a href="#section2" ng-click="next()">Outcome
+    
+                        </a>
+                                </li>
+                            </ul>
+                        </nav>
+    
+                        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+                        <script src="https://cdn.rawgit.com/chieffancypants/angular-hotkeys/master/build/hotkeys.min.js"></script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.js"></script>
+    
+                    </div>
+    
+                    <script>
+                        angular.module('app', ['cfp.hotkeys', 'ngAnimate'])
+                            .controller('MainController', function($scope, hotkeys) {
+    
+                                // functions
+                                $scope.active = 0;
+    
+                                $scope.previous = function() {
+                                    if ($scope.active != 0) $scope.active -= 1;
+                                }
+    
+                                $scope.next = function() {
+                                    if ($scope.active + 1 < $scope.images.length) $scope.active += 1;
+                                }
+    
+                                $scope.setActive = function(i) {
+                                    $scope.active = i;
+                                }
+    
+                                $scope.images = [{
+                                        'name': ' ',
+                                        'desc': 'Process',
+                                        'sec': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    
+                                    },
+    
+                                    {
+    
+                                        'name': 'Outcome',
+                                        'desc': '',
+                                        'sec': ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Lahfgdghfghtin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+    
+                                    },
+                                ];
+    
+                                // hot keys
+                                hotkeys.add({
+                                    combo: 'right',
+                                    description: 'Next slide',
+                                    callback: function() {
+                                        $scope.next();
+                                    }
+                                });
+                                hotkeys.add({
+                                    combo: 'left',
+                                    description: 'Previous slide',
+                                    callback: function() {
+                                        $scope.previous();
+                                    }
+                                });
+                            });
+                    </script>
+    
                 </div>
-
-                <div class="our-pixels-text">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                    </p>
-                </div>
+    
 
             </div>
-            <div class="our-pixels-names">
-
-                <h1><em>O</em>UR PIXELS</h1>
-
-                <div class="our-pixels-text">
-
-                    <h3>name</h3>
-                    <h3>name</h3>
-                    <h3>name</h3>
-                    <h3>name</h3>
-                </div>
+            <div class="Slideshow-Images-Section">
 
             </div>
 
