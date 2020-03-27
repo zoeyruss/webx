@@ -1,0 +1,115 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<main>
+
+<body>
+ 
+<section class="slideshow ng-scope" ng-app="app" ng-controller="MainController">
+  
+  <a id="top"></a>
+  <main id='main'>
+
+    <section id='ten'>
+      <div class='pane'
+           ng-repeat='change in images track by $index'
+           ng-class="{ 'active' : $index == active }"
+           ng-if="$index == active">
+        <main>
+            <h2>{{ change.name }}</h2>
+            <p>{{ change.desc }}</p>
+              <p>{{ change.sec }}</p>
+              <p>{{ change.img }}</p>
+
+        </main>
+      </div>
+    </section>
+
+  <nav id="nav">
+    <ul>
+      <li class="previous">
+        <a href="#top" ng-click="previous()">Process
+
+        </a>
+      </li>
+
+      <li class="next">
+        <a href="#top" ng-click="next()">Outcome
+
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+<script src="https://cdn.rawgit.com/chieffancypants/angular-hotkeys/master/build/hotkeys.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.js"></script>
+
+
+
+    <script>
+    angular.module('app', ['cfp.hotkeys', 'ngAnimate'])
+    	.controller('MainController', function($scope, hotkeys) {
+
+        	// functions
+        	$scope.active = 0;
+
+    		$scope.previous = function() {
+                if($scope.active != 0) $scope.active -= 1;
+            }
+
+        	$scope.next = function() {
+                if($scope.active + 1 < $scope.images.length) $scope.active += 1;
+            }
+
+        	$scope.setActive = function(i) {
+                $scope.active = i;
+            }
+
+        	$scope.images = [
+                {
+                	'name' : 'Process ',
+                    'desc' : '',
+                      'sec' : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+                    'img' : "images/1.png"
+            	},
+
+                {
+
+                	'name' : 'Outcome',
+                    'desc' : '',
+                    'sec' : ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+
+                    'img' : "images/10.png"
+            	},
+            ];
+
+        	// hot keys
+        	hotkeys.add({
+                combo: 'right',
+                description: 'Next slide',
+                callback: function() {
+                  $scope.next();
+                }
+            });
+        	hotkeys.add({
+                combo: 'left',
+                description: 'Previous slide',
+                callback: function() {
+                  $scope.previous();
+                }
+            });
+    	});
+</script>
+
+</section>
+
+
+</body>
+</main>
+</html>

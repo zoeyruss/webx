@@ -1,0 +1,146 @@
+<html><head>
+    <style id="compiled-css" type="text/css">
+        #slick_container {
+      width:360px;
+      margin:0 auto;
+      position:relative;
+  }
+  /*上書き修正*/
+   .slick-prev, .slick-next {
+      width:60px;
+      height:34px
+  }
+  .slick-prev:before, .slick-next:before {
+      content:"";
+  }
+    </style>
+    
+
+</head>
+    <body>
+
+        <nav class="nav">
+            <div class="padded">
+              <ul>
+                <link rel="stylesheet" href="test.css">
+                <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.css">
+              
+
+
+                <li class="active"><a id="link1" class="nav-section1" href="#section1">S1. Info</a></li>
+                <li><a id="link2" class="nav-section2" href="#section2">Section 2</a></li>
+                
+                
+                <li class="scrollTop"><a href="#"><span class="entypo-up-open"></span></a></li>
+              </ul>
+            </div>
+          </nav>
+          <section class="One_Slides">
+            <h1 id="section1">1. Info</h1>
+            
+             
+       
+     
+
+           
+            </section>
+            <section class="two_Slides">
+                <h1 id="section2">2.</h1>
+                
+                 
+                <div id="slick_container">
+                    <div class="your-class">
+                        <div>
+                            <img src="http://dummyimage.com/360x16:9/f90/fff" alt="">
+                        </div>
+                        <div>
+                            <img src="http://dummyimage.com/360x16:9/693/fff" alt="">
+                        </div>
+                        <div>
+                            <img src="http://dummyimage.com/360x16:9/3cf/fff" alt="">
+                        </div>
+                    </div>
+                    <!--prev,nextを追加-->
+                    <div class="arrows">
+                        <div class="slick-next">
+                            <img src="http://dummyimage.com/60x16:9/4b4b4b/fff" alt="">
+                        </div>
+                        <div class="slick-prev">
+                            <img src="http://dummyimage.com/60x16:9/4b4b4b/fff" alt="">
+                        </div>
+                    </div>
+                </div>
+                        
+                        <div id="slick_container">
+                    <div class="your-class">
+                        <div>
+                            <img src="http://dummyimage.com/360x16:9/f90/fff" alt="">
+                        </div>
+                        <div>
+                            <img src="http://dummyimage.com/360x16:9/693/fff" alt="">
+                        </div>
+                        <div>
+                            <img src="http://dummyimage.com/360x16:9/3cf/fff" alt="">
+                        </div>
+                    </div>
+                    <!--prev,nextを追加-->
+                    <div class="arrows">
+                        <div class="slick-next">
+                            <img src="http://dummyimage.com/60x16:9/4b4b4b/fff" alt="">
+                        </div>
+                        <div class="slick-prev">
+                            <img src="http://dummyimage.com/60x16:9/4b4b4b/fff" alt="">
+                        </div>
+                    </div>
+                </div>
+                <script>$(function () {
+    
+                    var $arrows = $('.arrows');
+                    var $next = $arrows.children(".slick-next");    
+                    var $prev = $arrows.children(".slick-prev");
+                    
+                    var slick = $('.your-class').slick({
+                        appendArrows: $arrows
+                    });
+                
+                    $('.slick-next').on('click', function (e) {
+                        var i = $next.index( this )
+                        slick.eq(i).slickNext();
+                    });
+                    $('.slick-prev').on('click', function (e) {
+                        var i = $prev.index( this )
+                        slick.eq(i).slickPrev();
+                    });
+                
+                });</script>
+         
+    
+               
+                </section>
+
+
+<script>
+
+
+
+    // ------------------------------
+// https://twitter.com/mattsince87
+// ------------------------------
+
+function scrollNav() {
+  $('.nav a').click(function(){  
+    //Toggle Class
+    $(".active").removeClass("active");      
+    $(this).closest('li').addClass("active");
+    var theClass = $(this).attr("class");
+    $('.'+theClass).parent('li').addClass('active');
+    //Animate
+    $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 160
+    }, 400);
+    return false;
+  });
+  $('.scrollTop a').scrollTop();
+}
+scrollNav();
+</script></body></html>

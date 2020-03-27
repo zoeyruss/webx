@@ -1,0 +1,214 @@
+<html lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	<title>Multiple Slider</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://use.typekit.net/zul8ybz.css">
+
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="test.css">
+  
+  </head>
+  <body>
+	<main>
+		  <header>
+		  <div class="logo">
+		  <a href="index.html"> MICA GD S2
+		  </a>  </div>
+		
+		  <div class="topnav" id="myTopnav">
+		
+			<a href="index.html">info</a>
+			<a href="# "></a>
+			<div class="dropdown">
+		
+			<a href="blossomgirls.html"> work</a>
+				<i class="fa fa-caret-down"></i>
+			  
+			  <div class="dropdown-content">
+				<a href="#"></a>
+				<a href="#"></a>
+		
+			  </div>
+			</div>
+			 
+		  </div>
+		
+		
+		  <script>
+		  function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+			  x.className += " responsive";
+			} else {
+			  x.className = "topnav";
+			}
+		  }
+		  </script>
+		</header>
+  
+        <div class="nav_2">
+		
+			  <ul>
+			   
+	
+				<li class="active"><a id="link1" class="nav_2-section1" href="#section1">S1. Info</a></li>
+				<li><a id="link2" class="nav_2-section2" href="#section2">Section 2</a></li>
+				
+				
+				<li class="scrollTop"><a href="#"><span class="entypo-up-open"></span></a></li>
+			  </ul>
+			</div>
+		<section class="content-container">
+			<section class="slideshow ng-scope" ng-app="app" ng-controller="MainController">
+  
+				<a id="top"></a>
+				<div id="main">
+			  
+				  <section id="ten">
+					<!-- ngRepeat: change in images track by $index --><!-- ngIf: $index == active --><div class="pane ng-scope active" ng-repeat="change in images track by $index" ng-class="{ 'active' : $index == active }" ng-if="$index == active">
+					  <div class="processs_desc">
+						  <h2 class="ng-binding">Process </h2>
+						  <p class="ng-binding"></p>
+							<p class="ng-binding">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							<p class="ng-binding"></p>
+			  
+                      </div>
+					</div><!-- end ngIf: $index == active --><!-- end ngRepeat: change in images track by $index --><!-- ngIf: $index == active --><!-- end ngRepeat: change in images track by $index -->
+				  </section>
+			  
+				<nav id="nav">
+				  <ul>
+                      
+					<li class="previous">
+					  <a href="#section1" ng-click="previous()">Process
+			  
+					  </a>
+					</li>
+			  
+					<li class="next">
+					  <a href="#section2" ng-click="next()">Outcome
+			  
+					  </a>
+					</li>
+				  </ul>
+				</nav>
+			  
+			  
+				<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+			  <script src="https://cdn.rawgit.com/chieffancypants/angular-hotkeys/master/build/hotkeys.min.js"></script>
+			  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.js"></script>
+			  
+			  
+			  
+				  <script>
+				  angular.module('app', ['cfp.hotkeys', 'ngAnimate'])
+					  .controller('MainController', function($scope, hotkeys) {
+			  
+						  // functions
+						  $scope.active = 0;
+			  
+						  $scope.previous = function() {
+							  if($scope.active != 0) $scope.active -= 1;
+						  }
+			  
+						  $scope.next = function() {
+							  if($scope.active + 1 < $scope.images.length) $scope.active += 1;
+						  }
+			  
+						  $scope.setActive = function(i) {
+							  $scope.active = i;
+						  }
+			  
+						  $scope.images = [
+							  {
+								  'name' : 'Process ',
+								  'desc' : '',
+									'sec' : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+								
+							  },
+			  
+							  {
+			  
+								  'name' : 'Outcome',
+								  'desc' : '',
+								  'sec' : ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+			  
+								
+							  },
+						  ];
+			  
+						  // hot keys
+						  hotkeys.add({
+							  combo: 'right',
+							  description: 'Next slide',
+							  callback: function() {
+								$scope.next();
+							  }
+						  });
+						  hotkeys.add({
+							  combo: 'left',
+							  description: 'Previous slide',
+							  callback: function() {
+								$scope.previous();
+							  }
+						  });
+					  });
+			  </script>
+			  
+			  </div><div class="cfp-hotkeys-container fade ng-scope" ng-class="{in: helpVisible}" style="display: none;"><div class="cfp-hotkeys"><!-- ngIf: !header --><h4 class="cfp-hotkeys-title ng-binding ng-scope" ng-if="!header">Keyboard Shortcuts:</h4><!-- end ngIf: !header --><!-- ngIf: header --><table><tbody><!-- ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --><tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope"><td class="cfp-hotkeys-keys"><!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">?</span><!-- end ngRepeat: key in hotkey.format() track by $index --></td><td class="cfp-hotkeys-text ng-binding">Show / hide this help menu</td></tr><!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --><tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope"><td class="cfp-hotkeys-keys"><!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">→</span><!-- end ngRepeat: key in hotkey.format() track by $index --></td><td class="cfp-hotkeys-text ng-binding">Next slide</td></tr><!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --><tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope"><td class="cfp-hotkeys-keys"><!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">←</span><!-- end ngRepeat: key in hotkey.format() track by $index --></td><td class="cfp-hotkeys-text ng-binding">Previous slide</td></tr><!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } --></tbody></table><!-- ngIf: footer --><div class="cfp-hotkeys-close" ng-click="toggleCheatSheet()">×</div></div></div></section>
+  <section class="slideshow-container">
+		  
+				<section class="One_Slides" id="section1">
+			
+				  
+			<section class="slideshow-content slideshow-display-container sectionone">
+				<div class="button_one">
+			  <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 0)"><h3>→</h3></div>
+			  <div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 0)"><h3>←</h3></div>
+		  </div>
+			  <img class="mySlides1" src="images/1.png" style="display: block;">
+			  <img class="mySlides1" src="images/2.png" style="width: 100%; display: none;">
+		  
+			</section>
+				</section>
+				<section class="two_Slides" id="section2">			<section class="slideshow-content slideshow-display-container sectiontwo"><div class="button_two">
+
+				  <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 1)"><h3>→</h3></div>
+			<div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 1)"><h3>←</h3></div>			</div>
+    <img class="mySlides2" src="images/4.png" style="display: block;">
+			  <img class="mySlides2" src="images/5.png" style="width: 100%; display: none;"></section>
+			
+			  
+			
+			</section>  
+		</section>
+		  
+		  <script>var slideIndex = [1, 1];
+			var slideId = ["mySlides1", "mySlides2"]
+			showDivs(1, 0);
+			showDivs(1, 1);
+			
+			function plusDivs(n, no) {
+			  showDivs(slideIndex[no] += n, no);
+			}
+			
+			function showDivs(n, no) {
+			  var i;
+			  var x = document.getElementsByClassName(slideId[no]);
+			  if (n > x.length) {
+				slideIndex[no] = 1
+			  }
+			  if (n < 1) {
+				slideIndex[no] = x.length
+			  }
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			  }
+			  x[slideIndex[no] - 1].style.display = "block";
+			}</script>
+		  
+		  </section>
+		</main>
+  </body></html>

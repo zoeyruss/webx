@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Multiple Slider</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+  <section class="w3-content w3-display-container">
+    <img class="mySlides1" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+    <img class="mySlides1" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
+  
+  </section>
+
+  <section class="w3-content w3-display-container">
+    <img class="mySlides2" src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="width:100%">
+    <img class="mySlides2" src="https://images.sftcdn.net/images/t_app-logo-l,f_auto,dpr_auto/p/ce2ece60-9b32-11e6-95ab-00163ed833e7/2183169552/the-test-fun-for-friends-logo.png" style="width:100%">
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
+  
+  </section>
+
+<script>var slideIndex = [1, 1];
+  var slideId = ["mySlides1", "mySlides2"]
+  showDivs(1, 0);
+  showDivs(1, 1);
+  
+  function plusDivs(n, no) {
+    showDivs(slideIndex[no] += n, no);
+  }
+  
+  function showDivs(n, no) {
+    var i;
+    var x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {
+      slideIndex[no] = 1
+    }
+    if (n < 1) {
+      slideIndex[no] = x.length
+    }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex[no] - 1].style.display = "block";
+  }</script>
+
+
+
+</body>
+
+</html>

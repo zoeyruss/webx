@@ -1,0 +1,28 @@
+#image-container {
+    margin: 0 auto;
+    width: 400px;
+  }
+  .pixel-name {
+    height: 30px;
+    background:#333; 
+    color: #fff;
+    padding-top: 10px;
+    font-family: open sans, sans-serif;
+    text-align: center;
+  }
+      
+  .li .thumbnail{
+    opacity:0;
+  }
+  .li:hover .thumbnail { 
+    opacity: 1;
+    cursor: pointer;
+  
+  }
+      
+  .li:hover .description {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  

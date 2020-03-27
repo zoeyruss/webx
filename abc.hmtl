@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alphetical List Navigation</title>
+
+    <script language="javascript" type="text/javascript">
+        let createArrayAtoZ = _ => {
+            return Array 
+               .apply(null, {length: 26}) 
+               .map((x, i) => String.fromCharCode(65 + i));
+        }
+
+        let jumptoAnchor = anchor => {
+            window.location.href = "#" + anchor;
+        }
+
+        let createNavigationList = _ => {
+            const abcChars = createArrayAtoZ();
+            const navigationEntries = abcChars.reduce(createDivForCharElement, ''); 
+            $('#nav').append(navigationEntries);
+
+            const lettersActive = ['A', 'C', 'G', 'M', 'X'];
+            lettersActive.forEach(letter => { 
+               changeItemState(letter); 
+               addListEntries(letter); 
+            });
+        }
+
+        let changeItemState = character => {
+            const characterElement = $('#nav').find('.CharacterElement[data-filter="' + character + '"]');
+            $(characterElement).click(() => jumptoAnchor(character));
+            characterElement.removeClass('Inactive');
+        }
+
+        let createDivForCharElement = (block, charToAdd) => { 
+            return block + "<div id='CharacterElement' class='CharacterElement Inactive' data-filter='" + charToAdd + "'>" + charToAdd + "</div>"; 
+        }
+
+        let addListEntries = letter => {
+            $('#AppComponent').append("<div class='AppElement' id='" + letter + "'>" + letter + "</div>");
+        }
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        .CharacterContainer {
+            text-align: center;
+            font-size: 1.4em;
+            line-height: 3em;
+            background-color: #abcdef;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .CharacterElement {
+            margin-right: 10px;
+        }
+        
+        .Inactive {
+            color: grey;
+            cursor: default;
+        }
+        
+        .AppElement {
+            font-size: 2em;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 14em;
+            background-color: #ffffdd;
+        }
+    </style>
+</head>
+
+<body onload="createNavigationList()">
+    <h1>Navigation List Example</h1>
+
+    <div id="nav" class="CharacterContainer"></div>
+
+    <div id="AppComponent"></div>
+</body>
+
+</html>
