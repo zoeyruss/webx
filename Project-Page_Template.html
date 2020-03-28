@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class="project-page">
     <main>
         <div class="topnav">
             <header class="change-navbar">
@@ -21,7 +21,7 @@
 
                     <div class="logo">
                         <a class="logo" href="index.html">
-                            <h2>MICA GD 2020</h2>
+                            <h3>MICA GD 2020</h3>
                         </a>
                     </div>
                     <nav id="overlay-menu">
@@ -112,8 +112,8 @@
                         <section id='ten'>
                             <div class='pane' ng-repeat='change in images track by $index' ng-class="{ 'active' : $index == active }" ng-if="$index == active">
                                 <div class="processs_desc">
-                                    <h2>{{ change.name }}</h2>
-                                    <h2>{{ change.desc }}</h2>
+                                    <h3>{{ change.name }}</h3>
+                                    <h3>{{ change.desc }}</h3>
                                     <p>{{ change.sec }}</p>
                                     <p>{{ change.img }}</p>
     
@@ -163,14 +163,14 @@
     
                                 $scope.images = [{
                                         'name': ' ',
-                                        'desc': 'Process',
+                                        'desc': 'Project Title - Process',
                                         'sec': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     
                                     },
     
                                     {
     
-                                        'name': 'Outcome',
+                                        'name': 'Project Title',
                                         'desc': '',
                                         'sec': ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Lahfgdghfghtin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
     
@@ -202,77 +202,31 @@
             <div class="Slideshow-Images-Section">
                 <div class="slideshow-container">
 
-                    <section class="One_Slides" id="section1">
+                    <div id="section1" class="slideshow-content slideshow-display-container sectionone">
+                        <div class="button_one">
+                            <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 0)">
+                                <h3>→</h3></div>
+                            <div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 0)">
+                                <h3>←</h3></div>
+                        </div>
+                        <img class="mySlides1" src="images/2.png" style="display: block;">
+                        <img class="mySlides1" src="images/process-1.png" style=" display: none;">
+
+                    </div>
+                    <div  id="section2" class="slideshow-content slideshow-display-container sectiontwo">
     
-                        <section class="slideshow-content slideshow-display-container sectionone">
-                            <div class="button_one">
-                                <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 0)">
-                                    <h3>→</h3></div>
-                                <div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 0)">
-                                    <h3>←</h3></div>
-                            </div>
-                            <img class="mySlides1" src="images/2.png" style="display: block;">
-                            <img class="mySlides1" src="images/process-1.png" style="width: 100%; display: none;">
-    
-                        </section>
-                        <div class="cfp-hotkeys-container fade ng-scope" ng-class="{in: helpVisible}" style="display: none;">
-                            <div class="cfp-hotkeys">
-                                <!-- ngIf: !header -->
-                                <h4 class="cfp-hotkeys-title ng-binding ng-scope" ng-if="!header">Keyboard Shortcuts:</h4>
-                                <!-- end ngIf: !header -->
-                                <!-- ngIf: header -->
-                                <table>
-                                    <tbody>
-                                        <!-- ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } -->
-                                        <tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope">
-                                            <td class="cfp-hotkeys-keys">
-                                                <!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">?</span>
-                                                <!-- end ngRepeat: key in hotkey.format() track by $index -->
-                                            </td>
-                                            <td class="cfp-hotkeys-text ng-binding">Show / hide this help menu</td>
-                                        </tr>
-                                        <!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } -->
-                                        <tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope">
-                                            <td class="cfp-hotkeys-keys">
-                                                <!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">→</span>
-                                                <!-- end ngRepeat: key in hotkey.format() track by $index -->
-                                            </td>
-                                            <td class="cfp-hotkeys-text ng-binding">Next slide</td>
-                                        </tr>
-                                        <!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } -->
-                                        <tr ng-repeat="hotkey in hotkeys | filter:{ description: '!$$undefined$$' }" class="ng-scope">
-                                            <td class="cfp-hotkeys-keys">
-                                                <!-- ngRepeat: key in hotkey.format() track by $index --><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key ng-binding ng-scope">←</span>
-                                                <!-- end ngRepeat: key in hotkey.format() track by $index -->
-                                            </td>
-                                            <td class="cfp-hotkeys-text ng-binding">Previous slide</td>
-                                        </tr>
-                                        <!-- end ngRepeat: hotkey in hotkeys | filter:{ description: '!$$undefined$$' } -->
-                                    </tbody>
-                                </table>
-                                <!-- ngIf: footer -->
-                                <div class="cfp-hotkeys-close" ng-click="toggleCheatSheet()">×</div>
+                        <div class="button_two">
+                            <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 1)">
+                                <h3>→</h3></div>
+                            <div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 1)">
+                                <h3>←</h3>
                             </div>
                         </div>
-                    </section>
-                    <section class="two_Slides" id="section2">
-    
-                        <section class="slideshow-content slideshow-display-container sectiontwo">
-    
-                            <div class="button_two">
-                                <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 1)">
-                                    <h3>→</h3></div>
-                                <div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 1)">
-                                    <h3>←</h3>
-                                </div>
-                            </div>
-                            <img class="mySlides2" src="images/1.png" style="display: block;">
-                            <img class="mySlides2" src="images/3.png" style="width: 100%; display: none;">
-                            <video class="mySlides2" playsinline="" autoplay="" loop="" muted="" style="display: none;">
-                                <source type="video/mp4" src="images/1.mp4">
-                        </section>
-    
-                    </section>
+                        <img class="mySlides2" src="images/1.png" style="display: block;">
+                        <img class="mySlides2" src="images/3.png" style=" display: none;">
+                        <video class="mySlides2" playsinline="" autoplay="" loop="" muted="" style="display: none;">
+                            <source type="video/mp4" src="images/1.mp4">
+                    </div>
                     <script>
                         var slideIndex = [1, 1];
                         var slideId = ["mySlides1", "mySlides2"]
@@ -683,10 +637,6 @@
                     <h3>←</h3> </div>
             </a>
 
-            <a href="pixel-poem.html">
-                <div class="bottom-Right-Arrow arrowstyle">
-                    <h3>→</h3></div>
-            </a>
         </footer>
     </main>
 </body>
