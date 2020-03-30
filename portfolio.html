@@ -6,11 +6,37 @@
     <title>about</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.typekit.net/zul8ybz.css">
-
-    <link rel="stylesheet" href="css/style.css">
+	
+	<script src="js/jquery.min.js"></script>
+	
+	<script src="js/slideshow.js"></script>
+	
+    
+    <link rel="stylesheet" href="css/tab-style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<script>
+        /* first carousel slidesshow */
+        $('#carousel-1').carousel({
+          
+         
+          interval: falso,
+    
+          pause: "hover",
+          
+          wrap: true,
+          
+          // Whether the carousel should react to keyboard events.
+          keyboard: true
+        });
+        
+        /* second carousel slidesshow */
+        $('#carousel-2').carousel({
+          interval: 3000,
+          wrap: true,
+          keyboard: true
+        });
+        </script>
 </head>
 
 <body class="project-page">
@@ -72,7 +98,7 @@
                         x.classList.toggle("change");
                     }
                 </script>
-                <script src="app.js"></script>
+              
 
             </header>
             <div class="change-navbar-two">
@@ -103,161 +129,201 @@
         <div class="grid">
 
             <div></div>
+            
+<div class="slide-desc-container">
+  
+   <div class=" Description-Section" >
 
-            <div class="Description-Section">
+              
+    <div class="slideshow ng-scope" ng-app="app" ng-controller="MainController">
+        <a id="top"></a>
+     
+            <div id='ten'> <button type="button" class="collapsible active">+ info</button>
+                <div class="content"> 
+                <div class='pane' ng-repeat='change in images track by $index' ng-class="{ 'active' : $index == active }" ng-if="$index == active">
+                    <div class="processs_desc">
+                        <h3>{{ change.name }}</h3>
+                        <h3>{{ change.desc }}</h3>
+                        <p>{{ change.sec }}</p>
+                        <p>{{ change.img }}</p>
 
-                <div class="slideshow ng-scope" ng-app="app" ng-controller="MainController">
-                    <a id="top"></a>
-                    <div id='main'>
-                        <section id='ten'>
-                            <div class='pane' ng-repeat='change in images track by $index' ng-class="{ 'active' : $index == active }" ng-if="$index == active">
-                                <div class="processs_desc">
-                                    <h3>{{ change.name }}</h3>
-                                    <h3>{{ change.desc }}</h3>
-                                    <p>{{ change.sec }}</p>
-                                    <p>{{ change.img }}</p>
-    
-                                </div>
-                            </div>
-                        </section>
-                        <nav id="nav" class="pointer1">
-                            <ul>
-                                <li class="previous">
-                                    <a href="#section1" ng-click="previous()">Process
-    
-                        </a>
-                                </li>
-    
-                                <li class="next">
-                                    <a href="#section2" ng-click="next()">Outcome
-    
-                        </a>
-                                </li>
-                            </ul>
-                        </nav>
-    
-                        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
-                        <script src="https://cdn.rawgit.com/chieffancypants/angular-hotkeys/master/build/hotkeys.min.js"></script>
-                        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.js"></script>
-    
                     </div>
-    
-                    <script>
-                        angular.module('app', ['cfp.hotkeys', 'ngAnimate'])
-                            .controller('MainController', function($scope, hotkeys) {
-    
-                                // functions
-                                $scope.active = 0;
-    
-                                $scope.previous = function() {
-                                    if ($scope.active != 0) $scope.active -= 1;
-                                }
-    
-                                $scope.next = function() {
-                                    if ($scope.active + 1 < $scope.images.length) $scope.active += 1;
-                                }
-    
-                                $scope.setActive = function(i) {
-                                    $scope.active = i;
-                                }
-    
-                                $scope.images = [{
-                                        'name': ' ',
-                                        'desc': 'Project Title - Process',
-                                        'sec': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    
-                                    },
-    
-                                    {
-    
-                                        'name': 'Project Title',
-                                        'desc': '',
-                                        'sec': ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Lahfgdghfghtin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
-    
-                                    },
-                                ];
-    
-                                // hot keys
-                                hotkeys.add({
-                                    combo: 'right',
-                                    description: 'Next slide',
-                                    callback: function() {
-                                        $scope.next();
-                                    }
-                                });
-                                hotkeys.add({
-                                    combo: 'left',
-                                    description: 'Previous slide',
-                                    callback: function() {
-                                        $scope.previous();
-                                    }
-                                });
-                            });
-                    </script>
-    
                 </div>
+            </div>
+        
+            <nav id="nav" class="pointer1">
+                <ul>
+                    <li class="previous">
+                        <a href="#carousel-1" ng-click="previous()">Process
+
+            </a>
+                    </li>
+
+                    <li class="next">
+                        <a href="#carousel-2" ng-click="next()">Outcome
+
+            </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+            <script src="https://cdn.rawgit.com/chieffancypants/angular-hotkeys/master/build/hotkeys.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.js"></script>
+
+        </div>
+
+        <script>
+            angular.module('app', ['cfp.hotkeys', 'ngAnimate'])
+                .controller('MainController', function($scope, hotkeys) {
+
+                    // functions
+                    $scope.active = 0;
+
+                    $scope.previous = function() {
+                        if ($scope.active != 0) $scope.active -= 1;
+                    }
+
+                    $scope.next = function() {
+                        if ($scope.active + 1 < $scope.images.length) $scope.active += 1;
+                    }
+
+                    $scope.setActive = function(i) {
+                        $scope.active = i;
+                    }
+
+                    $scope.images = [{
+                            'name': ' ',
+                            'desc': 'Project Title - Process',
+                            'sec': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+
+                        },
+
+                        {
+
+                            'name': 'Project Title',
+                            'desc': '',
+                            'sec': ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Lahfgdghfghtin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+
+                        },
+                    ];
+
+                    // hot keys
+                    hotkeys.add({
+                        combo: 'right',
+                        description: 'Next slide',
+                        callback: function() {
+                            $scope.next();
+                        }
+                    });
+                    hotkeys.add({
+                        combo: 'left',
+                        description: 'Previous slide',
+                        callback: function() {
+                            $scope.previous();
+                        }
+                    });
+                });
+        </script>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
     
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+</div>    
+                  
+                
+               
 
             </div>
-            <div class="Slideshow-Images-Section">
-                <div class="slideshow-container">
+<div class="slide-container">
+            <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                <!-- slides bulletes -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-1" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-1" data-slide-to="2" class=""></li>
+                </ol>
 
-                    <div id="section1" class="slideshow-content slideshow-display-container sectionone">
-                        <div class="button_one">
-                            <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 0)">
-                                <h3>→</h3></div>
-                            <div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 0)">
-                                <h3>←</h3></div>
-                        </div>
-                        <img class="mySlides1" src="images/2.png" style="display: block;">
-                        <img class="mySlides1" src="images/process-1.png" style=" display: none;">
-
+                <!-- wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- slides 1 -->
+                    <div class="item active">
+                        <img src="images/process-1.png" alt="Chania">
                     </div>
-                    <div  id="section2" class="slideshow-content slideshow-display-container sectiontwo">
-    
-                        <div class="button_two">
-                            <div class="slideshow-button slideshow-black slideshow-display-left" onclick="plusDivs(-1, 1)">
-                                <h3>→</h3></div>
-                            <div class="slideshow-button slideshow-black slideshow-display-right" onclick="plusDivs(1, 1)">
-                                <h3>←</h3>
-                            </div>
-                        </div>
-                        <img class="mySlides2" src="images/1.png" style="display: block;">
-                        <img class="mySlides2" src="images/3.png" style=" display: none;">
-                        <video class="mySlides2" playsinline="" autoplay="" loop="" muted="" style="display: none;">
-                            <source type="video/mp4" src="images/1.mp4">
+                    
+                    <!-- slides 2 -->
+                    <div class="item">
+                        <img src="images/1.png" alt="Chania">
                     </div>
-                    <script>
-                        var slideIndex = [1, 1];
-                        var slideId = ["mySlides1", "mySlides2"]
-                        showDivs(1, 0);
-                        showDivs(1, 1);
-    
-                        function plusDivs(n, no) {
-                            showDivs(slideIndex[no] += n, no);
-                        }
-    
-                        function showDivs(n, no) {
-                            var i;
-                            var x = document.getElementsByClassName(slideId[no]);
-                            if (n > x.length) {
-                                slideIndex[no] = 1
-                            }
-                            if (n < 1) {
-                                slideIndex[no] = x.length
-                            }
-                            for (i = 0; i < x.length; i++) {
-                                x[i].style.display = "none";
-                            }
-                            x[slideIndex[no] - 1].style.display = "block";
-                        }
-                    </script>
+                    
+                    <!-- slides 3 -->
+                    <div class="item">
+                        <img src="images/3.png" alt="Flower">
+                    </div>
                 </div>
 
+                <!-- left and right slides control arrrows -->
+                <a class="left cursor-prev carousel-control" href="#carousel-1" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="right cursor-next carousel-control" href="#carousel-1" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
             </div>
+            <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                <!-- slides bulletes -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-2" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-2" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-2" data-slide-to="2" class="active"></li>
+                </ol>
 
-            <div></div>
-            <div></div>
+                <!-- wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- slides 1 -->
+                    <div class="item">
+                        <img src="images/4.png" alt="Chania">
+                    </div>
+                    
+                    <!-- slides 2 -->
+                    <div class="item">
+                        <img src="images/11.png" alt="Chania">
+                    </div>
+                    
+                    <!-- slides 3 -->
+                    <div class="item active">
+                        <img src="images/13.png" alt="Flower">
+                    </div>
+                </div>
+
+                <!-- left and right slides control arrrows -->
+                <a class="left cursor-prev carousel-control" href="#carousel-2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="right cursor-next carousel-control" href="#carousel-2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+  
             <div></div>
             <div></div>
             <div></div>
@@ -631,13 +697,7 @@
             <div></div>
         </div>
 
-        <footer>
-            <a href="about-info.html">
-                <div class="bottom-Right-Arrow arrowstyle">
-                    <h3>←</h3> </div>
-            </a>
 
-        </footer>
     </main>
 </body>
 
