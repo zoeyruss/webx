@@ -42,6 +42,11 @@ font-family: pixel, sans-serif;
 font-family: pixelnumber, sans-serif;
 font-size: 1.5rem;
   }
+  .mica-logo {
+    height: 10vh;
+    width: 9vw;
+    margin-left: 2vw;
+}
   .number{font-family: pixelnumber, sans-serif;}
   
   p{
@@ -59,9 +64,9 @@ font-size: 1.5rem;
     font-family: titling-gothic-fb-extended, sans-serif;
     font-style: normal;
     font-weight: 900;
-    line-height: 1.2em;
+    line-height: 1em;
     letter-spacing: -0.05em;
-    font-size: 11.4rem;
+    font-size: 13vw;
     }
     h1{
       font-family: Suisse Int;
@@ -115,13 +120,12 @@ h5{
     font-family: pixel;
   }
   .large-title em{
-    font-size: 13rem;
+    font-size: 14.75vw;
     letter-spacing: 0.05em;
-
   }
   .arrowstyle{
     color: #11D2CC;
-    font-size: 11rem;
+    font-size: 12vw;
     font-family:unknown;
     }
 
@@ -181,11 +185,13 @@ h5{
 
 
    .landing-page {
-    position: relative;
     grid-column: 1/21;
     grid-row: 1;
     height: 100vh;
-    padding: 4vh 2vw 4vh 2vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    padding: 0vh 2vw 4vh 2vw;
   }
   
   .landing-page h1 {
@@ -586,7 +592,8 @@ footer h3{
   font-size: 4rem;
   line-height: 1.25em;
 }
-.slideshow #nav li a:hover{  color: #11D2CC;}
+.slideshow #nav li a:hover,
+footer h3:hover{  color: #11D2CC;}
 
 
 
@@ -610,11 +617,15 @@ footer.bottom-left-Arrow .arrowstyle h3{
   font-size: 11rem;
   font-family:unknown;
 }
-.bottom-Right-Arrow.arrowstyle {
-  color: black;
+.bottom-Right-Arrow.arrowstyle,
+
+.bottom-Left-Arrow.arrowstyle{
+
+  padding: 0vh .75vw;
   cursor: pointer;
 }
-.bottom-Right-Arrow.arrowstyle:hover {
+.bottom-Right-Arrow.arrowstyle:hover,
+.bottom-Left-Arrow.arrowstyle:hover {
   color: #11D2CC;
   cursor: pointer;
 }
@@ -1044,7 +1055,7 @@ section.profile-images-container {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(4.2rem, 1fr));
     grid-auto-rows: 1fr;
     top: 0;
   }
@@ -1084,9 +1095,8 @@ div {
 
 .welcome {
     grid-column: 1/12;
-  background-color: #11D2CC;
 
-    grid-row: 3/11;
+    grid-row: 3/10;
 }
 
 .welcome-text {
