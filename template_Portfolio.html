@@ -139,79 +139,31 @@
    <div class=" Description-Section" >
 
               
-    <div class="slideshow ng-scope" ng-app="app" ng-controller="MainController">
-        <a id="top"></a>
+  
+  
      
-            <div id='ten'> <button type="button" class="collapsible active">+ info</button>
-                <div class="content"> 
-                <div class='pane' ng-repeat='change in images track by $index' ng-class="{ 'active' : $index == active }" ng-if="$index == active">
-                    <div class="processs_desc">
-                        <h3>{{ change.name }}</h3>
-                        <h3>{{ change.desc }}</h3>
-                        <p>{{ change.sec }}</p>
-                        <p>{{ change.img }}</p>
+           <button type="button" class="collapsible">+ info</button>
+ <div class="content">
+<h3 class="change-head"></h3>
+  <p class="change"></p>
 
-                    </div>
-                </div>
-            </div>
+  <div class="onchange"><h3>dfasdfasf</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskto</p></div>
+    
+  </div>
+  
+    
+<div class="process-outcome-btns">
         
-            <nav id="nav" class="pointer1">
-                <ul>
-                    <li class="previous">
-                        <a href="#carousel-1" ng-click="previous()">Process
+  <div class="btn previous"><a href="#carousel-1">Outcome</a></div>
 
-            </a>
-                    </li>
+</a>
+  <div class="tbtn Next"><a href="#carousel-2">Process</a></div>
+  <script src="js/buttons.js"></script>
 
-                    <li class="next">
-                        <a href="#carousel-2" ng-click="next()">Outcome
+</div>
+      
 
-            </a>
-                    </li>
-                </ul>
-            </nav>
-
-
-        </div>
-
-        <script>
-            angular.module('app', ['cfp.hotkeys', 'ngAnimate'])
-                .controller('MainController', function($scope, hotkeys) {
-
-                    // functions
-                    $scope.active = 0;
-
-                    $scope.previous = function() {
-                        if ($scope.active != 0) $scope.active -= 1;
-                    }
-
-                    $scope.next = function() {
-                        if ($scope.active + 1 < $scope.images.length) $scope.active += 1;
-                    }
-
-                    $scope.setActive = function(i) {
-                        $scope.active = i;
-                    }
-
-                    $scope.images = [{
-                            'name': ' ',
-                            'desc': 'Project Title - Process',
-                            'sec': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-
-                        },
-
-                        {
-
-                            'name': 'Project Title',
-                            'desc': '',
-                            'sec': ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Lahfgdghfghtin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
-
-                        },
-                    ];
-
-
-                });
-        </script>
+  
 <script>
     var coll = document.getElementsByClassName("collapsible");
     var i;
@@ -228,13 +180,11 @@
       });
     }
     </script>
+  </div>
 
-</div>    
                   
                 
-               
-
-            </div>
+       
 <div class="slide-container">
             <div id="carousel-1" class="carousel slide" data-ride="carousel">
                 <!-- slides bulletes -->
@@ -309,7 +259,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div>    
   
             <div></div>
             <div></div>
