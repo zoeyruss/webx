@@ -240,8 +240,12 @@ img {
 .btn.previous{
 	color: black;
 }
-.btn.previous a:hover {
+.btn.previous a:hover,
+.tbtn.next a:hover {
 	color:#11D2CC;
+}
+.btn.previous a:focus{
+	color:#11D2CC;	
 }
 .slide-container{
 	display: flex;
@@ -1293,5 +1297,15 @@ content{
 	height: 10vh;
 	top: 93vh;
 	margin-left: 2vw;
+}
+.back-portfolio {
+    top: 93vh;
+    position: fixed;
+    z-index: 99999;
+    right: 13px;
+}
+.back-portfolio a{
+   font-family: unknown;
+   font-size: .5rem;
 }
 
