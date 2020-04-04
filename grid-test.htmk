@@ -27,19 +27,19 @@
                     <nav id="overlay-menu">
                         <ul class="menu nav-links " id="nav-links">
                             <li class="dropdown">
-                                <a href="welcome.html"><h5><em>I</em>ntro text   
+                                <a href="Welcome-Info_Page-1.html"><h5><em>I</em>ntro text   
 				</h5></a></li>
 
-                            <li class="dropdown"><a href="v2_webxibition.html"><h5><em>D</em>egree <em>P</em>rojects</h5></a>
+                            <li class="dropdown"><a href="Webxhibition-Page-2.html"><h5><em>D</em>egree <em>P</em>rojects</h5></a>
                             </li>
 
-                            <li class="dropdown"><a href="our-pixels.html"><h5><em>O</em>ur <em>P</em>ixels</h5></a>
+                            <li class="dropdown"><a href="Our-Pixels_Page-3.html"><h5><em>O</em>ur <em>P</em>ixels</h5></a>
                             </li>
                             <li class="dropdown">
-                                <a href="pixel-poem.html"><h5><em>O</em>rgin</h5></a>
+                                <a href="Pixels-Poem_Page-5.html"><h5><em>O</em>rgin</h5></a>
                             </li>
                             <li class="dropdown">
-                                <a href="about.html"><h5><em>A</em>bout</h5></a>
+                                <a href="About-MICA_Page-4.html"><h5><em>A</em>bout</h5></a>
                             </li>
 
                         </ul>

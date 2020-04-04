@@ -265,8 +265,8 @@ footer a:hover {
 }
 @media (max-width: 379px) and (min-width: 0px) {
 	footer {
-		top: 91vh;
-		height: 9vh;
+		top: 84vh;
+		height: 19vh;
 	}
 }
 /*close footer*/
@@ -464,7 +464,7 @@ section.webx-info {
 }
 @media (max-width: 379px) and (min-width: 0px) {
   .logo {
-    margin: 1.95vw;
+    margin: 0.95vw;
   }
 }
 }
