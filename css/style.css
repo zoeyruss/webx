@@ -393,7 +393,7 @@ header {
 	height: 13vh;
 	text-align: left;
 	z-index: 9999;
-	margin: .75vw;
+	margin: 1.95vw;
 }
 .logo img {
 	height: 13vh;
@@ -437,7 +437,18 @@ section.webx-info {
 	font-size: 11.5rem;
 	transform: translate(-50%, -50%);
 }
-@media (max-width: 3000px) and (min-width: 1800px) {}@media (max-width: 1799px) and (min-width: 768px) {}@media (max-width: 767px) and (min-width: 599px) {}@media (max-width: 598px) and (min-width: 380px) {
+@media (max-width: 3000px) and (min-width: 1800px) {.logo {
+  margin: 0.65vw;
+}}
+@media (max-width: 1799px) and (min-width: 768px) {  .logo {
+  margin: 1.95vw;
+}
+}
+@media (max-width: 767px) and (min-width: 599px) {  .logo {
+  margin: 1.95vw;
+}
+}
+@media (max-width: 598px) and (min-width: 380px) {
 	.landing-page {
 		grid-column:1/21;
 		grid-row:1;
@@ -447,8 +458,16 @@ section.webx-info {
 		justify-content:center;
 		padding:0vh 2vw 4vh 2vw;
 	}
+  .logo {
+    margin: 1.95vw;
+  }
 }
-@media (max-width: 379px) and (min-width: 0px) {}
+@media (max-width: 379px) and (min-width: 0px) {
+  .logo {
+    margin: 1.95vw;
+  }
+}
+}
 /*Landing Page Close */
 
 .button_one {
@@ -564,7 +583,7 @@ nav {
 .change-navbar-two .logo,
 .change-navbar-two nav {
 	position: fixed;
-	height: 2%;
+	height: 1%;
 	line-height: 1;
 }
 .change-navbar .nav-active {
@@ -648,6 +667,7 @@ pixel {
 .change-navbar {
 	z-index: 999;
 	height: 10vh;
+	position: fixed;
 	display: block !important;
 	opacity: 1 !important;
 }
@@ -723,27 +743,34 @@ pixel {
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.change-navbar {
 		height: 7vh;
-	}
+  }
+  .burger{}
 }
 @media (max-width: 1799px) and (min-width: 768px) {
 	.change-navbar {
 		height: 6vh;
-	}
+  }
+  .burger{}
 }
 @media (max-width: 767px) and (min-width: 599px) {
 	.change-navbar {
 		height: 6vh;
-	}
+  }
+  .burger{}
 }
 @media (max-width: 598px) and (min-width: 380px) {
 	.change-navbar {
 		height: 5vh;
-	}
+  }
+  .burger{}
 }
 @media (max-width: 379px) and (min-width: 0px) {
 	.change-navbar {
-		height: 6vh;
-	}
+		height: 7vh;
+		}
+  .burger{
+    margin: 1vh 2vw;
+}
 }
 /*TopNav Close*/
 
@@ -970,7 +997,7 @@ pixel {
 	display: flex;
 }
 .our-pixels-text {
-	width: 30vw;
+	width: 90vw;
 	align-self: center;
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
@@ -983,17 +1010,28 @@ pixel {
 	.our-pixels-poem {}
 }
 @media (max-width: 767px) and (min-width: 599px) {
-	.our-pixels-poem {}
+  .our-pixels-poem {}
+}
+.our-pixels-text {
+  width: 90vw;
+
+}
 }
 @media (max-width: 598px) and (min-width: 380px) {
 	.our-pixels-poem {}
 }
 @media (max-width: 379px) and (min-width: 0px) {
 	.our-pixels-poem {
-		grid-column: 1/9;
-		flex-direction: column;
-		grid-row: 3/16;
-	}
+    overflow: auto;
+    height: 57vh;
+    grid-column: 1/9;
+
+    padding: 12vh 2vw 3vh 0vw;
+    flex-direction: column;
+    grid-row: 3/13;
+  }
+  .our-pixels-text {
+  }
 }
 /*Close Poem section */
 
@@ -1057,8 +1095,10 @@ pixel {
 		grid-column: 1/9;
 		grid-row: 2/19;
 		flex-direction: column;
+		overflow: auto;
 		justify-content: flex-start;
 		padding-top: 6vh;
+		height: 70vh;
 		}
   .about-text {
     width: 93vw;
@@ -1490,7 +1530,6 @@ svg#Layer_1 {
 }
 .our-pixels-images {} .about-text,
 .our-pixels-text {
-	top: 0;
 }
 .our-pixels-names {
 	align-self: center;
