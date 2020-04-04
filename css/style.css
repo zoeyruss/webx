@@ -215,7 +215,7 @@ footer a:hover {
 @media (max-width: 379px) and (min-width: 0px) {
 	footer {
 		bottom:0;
-		height: 19vh;
+		height: 13vh;
 	}
 }
 /*close footer*/
@@ -396,16 +396,21 @@ section.webx-info {
 @media (max-width: 767px) and (min-width: 599px) {  .logo {
   margin: 1.95vw;
 }
+.landing-page {
+	grid-column: 1/21;
+	grid-row: 1;
+	height: 100vh;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+	padding: 0vh 2vw 4vh 2vw;
+}
 }
 @media (max-width: 598px) and (min-width: 380px) {
 	.landing-page {
-		grid-column:1/21;
-		grid-row:1;
-		height:100vh;
-		flex-direction:column;
-		display:flex;
-		justify-content:center;
-		padding:0vh 2vw 4vh 2vw;
+
+		justify-content: center;
+	
 	}
   .logo {
     margin: 1.95vw;
@@ -414,7 +419,12 @@ section.webx-info {
 @media (max-width: 379px) and (min-width: 0px) {
   .logo {
     margin: 0.95vw;
-  }
+  
+}
+.landing-page {
+
+	justify-content: center;
+
 }
 }
 /*Landing Page Close */
@@ -717,7 +727,7 @@ pixel {
 }
 @media (max-width: 379px) and (min-width: 0px) {
 	.change-navbar {
-		height: 7vh;
+		height: 10vh;
 		}
   .burger{
     margin: 1vh 2vw;
@@ -773,7 +783,7 @@ pixel {
 	.welcome {
 		grid-column: 1/9;
 		grid-row: 2/9;
-		grid-row: 3/15;
+		grid-row: 3/9;
 	}
 }
 /*Welcome Page Close */
@@ -910,9 +920,10 @@ pixel {
 }
 @media (max-width: 379px) and (min-width: 0px) {
 	.project_desc {
-		grid-column: 1/9;
+		grid-column: 1/8;
 		height: 100%;
-		grid-row: 2/8;
+		background: red;
+		grid-row: 2/6;
 	}
 	.hide-div {
 		display: none;
@@ -920,7 +931,8 @@ pixel {
 	.tester {
 		grid-column: 1/9;
 		padding: 1vh 9vw;
-		grid-row: 2/8;
+		grid-row: 2/6;
+		background: red;
 	}
 	.diplay-flex a {
 		display: flex;
@@ -963,7 +975,7 @@ pixel {
 	grid-column:1 / 1;
 }
 .webx-img-grid .grid > *:first-child {
-	grid-row: 2/8;
+	grid-row: 2/7;
 	grid-column: 1/9;
 }
 /* Just to make the grid visible */
@@ -995,7 +1007,7 @@ pixel {
 }
 @media (max-width: 379px) and (min-width: 0px) {
 	.grid {
-		grid-template-columns: repeat(auto-fill, minmax(2.75rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
 	}
 }
 /*Close Grid Structure*/
@@ -1048,12 +1060,12 @@ pixel {
 @media (max-width: 379px) and (min-width: 0px) {
 	.our-pixels-poem {
     overflow: auto;
-    height: 57vh;
-    grid-column: 1/9;
-
-    padding: 12vh 2vw 3vh 0vw;
+    height: 39vh;
+    grid-column: 1/8;
+    padding: 27vh 2vw 3vh 0vw;
     flex-direction: column;
-    grid-row: 3/13;
+    grid-row: 2/9;
+    background: red;
   }
   .our-pixels-text {
   }
