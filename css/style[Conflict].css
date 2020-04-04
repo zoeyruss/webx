@@ -1060,12 +1060,12 @@ pixel {
 @media (max-width: 379px) and (min-width: 0px) {
 	.our-pixels-poem {
     overflow: auto;
-    height: 57vh;
-    grid-column: 1/9;
-
-    padding: 12vh 2vw 3vh 0vw;
+    height: 39vh;
+    grid-column: 1/8;
+    padding: 27vh 2vw 3vh 0vw;
     flex-direction: column;
-    grid-row: 3/13;
+    grid-row: 2/9;
+    background: red;
   }
   .our-pixels-text {
   }

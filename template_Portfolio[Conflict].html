@@ -6,14 +6,44 @@
     <title>about</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.typekit.net/zul8ybz.css">
-
-    <link rel="stylesheet" href="css/style.css">
+	
+    <script src="js/jquery.min.js"></script>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+    <script src="https://cdn.rawgit.com/chieffancypants/angular-hotkeys/master/build/hotkeys.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-animate.js"></script>
+	
+	<script src="js/slideshow.js"></script>
+	
+    
+    <link rel="stylesheet" href="css/tab-style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<script>
+        /* first carousel slidesshow */
+        $('#carousel-1').carousel({
+          
+         
+          interval: falso,
+    
+          pause: "hover",
+          
+          wrap: true,
+          
+          // Whether the carousel should react to keyboard events.
+          keyboard: true
+        });
+        
+        /* second carousel slidesshow */
+        $('#carousel-2').carousel({
+          interval: 3000,
+          wrap: true,
+          keyboard: true
+        });
+        </script>
 </head>
 
-<body>
+<body class="project-page">
     <main>
         <div class="topnav">
             <header class="change-navbar">
@@ -21,7 +51,7 @@
 
                     <div class="logo">
                         <a class="logo" href="index.html">
-                            <h2>MICA GD 2020</h2>
+                            <h3>MICA GD 2020</h3>
                         </a>
                     </div>
                     <nav id="overlay-menu">
@@ -30,7 +60,7 @@
                                 <a href="Welcome-Info_Page-1.html"><h5><em>I</em>ntro text   
 					</h5></a></li>
 
-                            <li class="dropdown"><a href="Webxhibition-Page-2.html"><h5><em>D</em>egree <em>P</em>rojects</h5></a>
+                            <li class="dropdown"><a href="Webxhibition-Page-2 2.html"><h5><em>D</em>egree <em>P</em>rojects</h5></a>
                             </li>
 
                             <li class="dropdown"><a href="Our-Pixels_Page-3.html"><h5><em>O</em>ur <em>P</em>ixels</h5></a>
@@ -72,7 +102,7 @@
                         x.classList.toggle("change");
                     }
                 </script>
-                <script src="app.js"></script>
+              
 
             </header>
             <div class="change-navbar-two">
@@ -100,18 +130,150 @@
 
             </div>
         </div>
-
         <div class="grid">
 
             <div></div>
-            <div class="welcome">
+            
+<div class="slide-desc-container">
+  
+   <div class=" Description-Section" >
 
-                <h1><em>W</em>ELCOME TO <br> OUR <em>W</em>EBXHIBITION↘</h1>
-                <p>A Pixel is a tiny square of colour. Multiple pixels are used to form one image. Each pixel is different and unique. A single block of pixel is nothing. Without the other pixels, an image is incomplete. Without even one pixel, an image is incomplete. Without even one person, our family is incomplete.
+              
+  
+  
+     
+           <button type="button" class="collapsible">+ info</button>
+ <div class="content">
+<h3 class="change-head"></h3>
+  <p class="change"></p>
 
-                    <br> We are the pixels of MICA grid
-                    <br> ******This text needs edits*****</p>
+  <div class="onchange"><h3>dfasdfasf</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskto</p></div>
+    
+  </div>
+  
+    
+<div class="process-outcome-btns">
+        
+  <div class="btn previous active"><a href="#carousel-1">Outcome</a></div>
+
+</a>
+  <div class="tbtn Next"><a href="#carousel-2">Process</a></div>
+  <script src="js/buttons.js"></script>
+
+</div>
+      
+
+  
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+  </div>
+
+                  
+                
+       
+<div class="slide-container">
+            <div id="carousel-1" class="carousel slide" data-ride="carousel">
+                <!-- slides bulletes -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-1" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-1" data-slide-to="2" class=""></li>
+                </ol>
+
+                <!-- wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- slides 1 -->
+                    <div class="item active">
+                        <video playsinline="" autoplay="" loop="" muted="">
+                            <source type="video/mp4" src="images/logo.mp4">
+                     
+                            </video>
+                    </div>
+                    
+                    <!-- slides 2 -->
+                    <div class="item">
+                        <video playsinline="" autoplay="" loop="" muted="">
+                            <source type="video/mp4" src="images/1.mp4">
+                     
+                            </video>
+                    </div>
+                    
+                    <!-- slides 3 -->
+                    <div class="item">
+                        <img src="images/11.png" alt="Flower">
+                    </div>
+                </div>
+
+                <!-- left and right slides control arrrows -->
+                <a class="left cursor-prev carousel-control" href="#carousel-1" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="right cursor-next carousel-control" href="#carousel-1" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
             </div>
+            <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                <!-- slides bulletes -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-2" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-2" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-2" data-slide-to="2" class="active"></li>
+                </ol>
+
+                <!-- wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- slides 1 -->
+                    <div class="item">
+                        <img src="images/all_DynamicLogo_AD2_Spring2020 Folder copy 2.png" alt="Chania">
+                    </div>
+                    
+                    <!-- slides 2 -->
+                    <div class="item">
+                        <img src="images/process-1.png" alt="Chania">
+                    </div>
+                    
+                    <!-- slides 3 -->
+                    <div class="item active">
+                        <video playsinline="" autoplay="" loop="" muted="">
+                            <source type="video/mp4" src="images/Side1_Behaviors_DynamicLogo_AD2_Spring2021.mp4">
+                     
+                            </video>
+                    </div>
+                </div>
+
+                <!-- left and right slides control arrrows -->
+                <a class="left cursor-prev carousel-control" href="#carousel-2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="right cursor-next carousel-control" href="#carousel-2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        </div>
+    </div>    
+  
+            <div class="back-portfolio">	
+                <a href="Webxhibition-Page-2 2.html">
+                <div class="bottom-Right-Arrow arrowstyle"> 	<h3>→</h3></div>
+                </a></div>
             <div></div>
             <div></div>
             <div></div>
@@ -455,97 +617,6 @@
             <div></div>
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-         
             <div></div>
             <div></div>
             <div></div>
@@ -575,24 +646,8 @@
             <div></div>
         </div>
 
-        <footer>
-            <div class="arrowstyle">
-                <a href="index.html">
 
-                    <h3>←</h3>
-                </a>
-              
-            </div>
-
-            <div class="arrowstyle">
-                <a href="Webxhibition-Page-2.html">
-
-                    <h3>→</h3>
-                </a>
-            </div>
-        </footer>
     </main>
-
 </body>
 
 </html>
