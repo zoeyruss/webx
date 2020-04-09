@@ -4496,37 +4496,6 @@
   var Observer = {
     func: win.MutationObserver || win.WebkitMutationObserver,
     attach: function attach(target, options) {
-      if ( options === void 0 ) options = {};
-
-      var swiper = this;
-
-      var ObserverFunc = Observer.func;
-      var observer = new ObserverFunc(function (mutations) {
-        // The observerUpdate event should only be triggered
-        // once despite the number of mutations.  Additional
-        // triggers are redundant and are very costly
-        if (mutations.length === 1) {
-          swiper.emit('observerUpdate', mutations[0]);
-          return;
-        }
-        var observerUpdate = function observerUpdate() {
-          swiper.emit('observerUpdate', mutations[0]);
-        };
-
-        if (win.requestAnimationFrame) {
-          win.requestAnimationFrame(observerUpdate);
-        } else {
-          win.setTimeout(observerUpdate, 0);
-        }
-      });
-
-      observer.observe(target, {
-        attributes: typeof options.attributes === 'undefined' ? true : options.attributes,
-        childList: typeof options.childList === 'undefined' ? true : options.childList,
-        characterData: typeof options.characterData === 'undefined' ? true : options.characterData,
-      });
-
-      swiper.observer.observers.push(observer);
     },
     init: function init() {
       var swiper = this;
