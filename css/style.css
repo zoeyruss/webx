@@ -228,8 +228,15 @@ em {
 	font-size: 7.75vw;
 	letter-spacing: 0.05em;
 }
+@media (max-width: 3000px) and (min-width: 1800px) {}
+	@media (max-width: 1799px) and (min-width: 1200px) {  }
+@media (max-width: 1199px) and (min-width: 899px) {}
+@media (max-width: 898px) and (min-width: 599px) { }
+@media (max-width: 598px) and (min-width: 380px) {}
+@media (max-width: 379px) and (min-width: 0px) {}
 
-@media (max-width: 379px) and (min-width: 0px) {
+
+@media (max-width: 379px) and (min-width: 0px) {}
 	h1 {
 		font-size:1.9rem;
 		line-height:1em;
@@ -376,6 +383,7 @@ section.webx-info {
 	  
 }
 }
+
 @media (max-width: 1799px) and (min-width: 1200px) {  
 	.large-title{
 	  font-size: 7vw;
@@ -400,6 +408,7 @@ section.webx-info {
 		
 		}
 }
+
 @media (max-width: 1199px) and (min-width: 899px) {
 
 .landing-page {
@@ -425,6 +434,7 @@ section.webx-info {
 		
 	}
 }
+
 @media (max-width: 898px) and (min-width: 599px) { 
 	.large-title em{
 
@@ -442,7 +452,7 @@ section.webx-info {
   }
   .landing-page-info p{
 	  font-size:;
-	  font-size: 1.8rem;
+	  font-size: .8rem;
   }
   .large-title{
 
@@ -460,6 +470,7 @@ section.webx-info {
 		
 }
 }
+
 @media (max-width: 598px) and (min-width: 380px) {
 	.large-title em{
 		
@@ -486,6 +497,7 @@ section.webx-info {
 		
 }
 }
+
 @media (max-width: 379px) and (min-width: 0px) {
 	.large-title em{
 		font-size: 7.75vw;
@@ -631,7 +643,11 @@ li.menu-items {
 }
 
 @media (max-width: 3000px) and (min-width: 1800px) {
-	.header{grid-column: 1/36;height:;}
+	.header{grid-column: 1/36;height:;
+		svg#Logo_SVG {
+			height: 8vh;
+			width: 31vw;
+		}}
 
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
