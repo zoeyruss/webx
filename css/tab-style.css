@@ -294,15 +294,12 @@ button a:focus{
 
 }
 
-.process-outcome-btns{
-
-    top: 5.4vh;
-    height: 2.2vh;
-}
+.process-outcome-btns{top: 6.9vh;height: 3vh;}
 
 .slide-desc-container{
-    height: 22.2vh;
-    top: 11.1vh;
+    height: 17.2vh;
+    top: 12.1vh;
+    overflow: auto;
 }
 
 }
@@ -674,10 +671,9 @@ div#carousel-2{
 	div#carousel-1 {
 		top: 0;
 		z-index: 1;
-		height: 100%;
-		grid-row: 6/25;
+		height: 90%;
+		grid-row: 8/25;
 		width: 100%;
-	
 	}
 	div#carousel-1, div#carousel-2 {
 		grid-column: 1/11;
