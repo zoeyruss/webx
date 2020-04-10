@@ -230,8 +230,9 @@ em {
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
 	h1 {
-		font-size:1.9rem;
+		font-size: 2.9rem;
 		line-height:1em;
+		margin-bottom: 3vh;
 	}
 	.menu-items h5{
 		font-size: 4rem;
@@ -705,13 +706,10 @@ li.menu-items {
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.header{grid-column: 1/36;height:;}
 		svg#Logo_SVG {
-			height: 8vh;
-			width: 31vw;
+			height: 5vh;
+			width: 8vw;
 		}
-		.logo{
-
-			left: 83%;
-		}
+		.logo{left: 90%;}
 
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
@@ -985,7 +983,7 @@ z-index: 99999;
 		height: 42vh;
 		font-size: .5rem;
 		pointer-events: visible;
-		background-color: red;
+	
 		width: 100vw;
   }
   .hide-div {
@@ -997,7 +995,7 @@ z-index: 99999;
 	.project_desc {
 		grid-column: 1/8;
 		height: 100%;
-		background: red;
+	
 		grid-row: 2/6;
 	}
 	.hide-div {
@@ -1007,7 +1005,7 @@ z-index: 99999;
 		grid-column: 1/9;
 		padding: 1vh 9vw;
 		grid-row: 2/6;
-		background: red;
+	
 	}
 	.diplay-flex a {
 		display: flex;
@@ -1017,7 +1015,7 @@ z-index: 99999;
 		display: block;
 		height: 100%;
 		display: block;
-		background: red;
+	
 		flex-direction: column;
 		cursor: pointer;
 		height: 22vh;
@@ -1056,10 +1054,6 @@ z-index: 99999;
 /* Just to make the grid visible */
 
 .grid > * {
-	background:rgba(0,
-	0,
-	0,
-	0.0);
 	border-left:.1px gray solid;
 	border-bottom:.1px gray solid;
 }
@@ -1769,7 +1763,6 @@ div#nav {
 }
 .active,
 .collapsible:hover {
-	background-color: red;
 }
 .content {
 	position: fixed;
