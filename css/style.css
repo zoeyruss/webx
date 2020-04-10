@@ -714,7 +714,7 @@ li.menu-items {
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
 	.header{
-		height: 6.4vh;
+		height: 7.4vh;
 		grid-column: 1/31;
 		grid-row: 1/2;
 		}

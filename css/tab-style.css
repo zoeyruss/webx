@@ -252,9 +252,7 @@ li.menu-items {
  {
 	position:fixed;
 	display: flex;
-	border-top: gray solid .05px;
 	width: 17.8vw;
-	background: white;
 	padding: 1rem;
 	z-index: 999;
 	}
@@ -286,6 +284,12 @@ button a:focus{
 	top: 12.28vh;
 	height: 3.8vh;
 }
+.white-rectangle{
+	grid-column: 1/8;
+	background-color: white;
+	grid-row: 3/16;
+}
+
 
 
 .contact-info,
@@ -304,14 +308,18 @@ button a:focus{
 }
 @media (max-width: 1799px) and (min-width: 768px) {
 	.slide-desc-container {
-		height: 59.2vh;
-		top: 19.1vh;
-	 
+		height: 55.2vh;
+		top: 22.1vh;
 	}
+	.white-rectangle{
+		grid-column: 1/7;
+		background-color: white;
+		grid-row: 3/16;
+	}
+	
 	.process-outcome-btns {
-		
-		top: 11.48vh;
-		height: 5.2vh;
+		top: 14.69vh;
+		height: 3.3vh;
 	}
 	
 	
@@ -319,13 +327,11 @@ button a:focus{
 	.slide-desc-container,
 	.process-outcome-btns
 	 {
-		
-		width: 17.8vw;
-		background: white;
-		 }
+		width: 21.8vw;
+		}
 	.contact-info {
-		top: 80.8vh;
-		height: 9.1vh;
+		top: 81.8vh;
+		height: 10.3vh;
 	}
 
 }
@@ -335,6 +341,12 @@ button a:focus{
 		top: 19.1vh;
 	 
 	}
+	.white-rectangle{
+		grid-column: 1/8;
+		background-color: white;
+		grid-row: 3/16;
+	}
+	
 	.process-outcome-btns {
 		
 		top: 11.48vh;
@@ -651,7 +663,7 @@ div#carousel-2 {
     grid-row: 31/53;
     
     background: red;
-]
+
 }
 
 
