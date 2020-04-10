@@ -73,12 +73,14 @@ body {
     justify-content: center;
 }
 .arrowstyle{
-	color: #11D2CC;
+	color: gray;
 	font-family: unknown;
 	align-items: center;
 	
 }
-
+.arrowstyle:hover{
+	color: #11D2CC;
+}
 .footer {
     grid-row: 15/24;
     display: flex;
@@ -155,7 +157,7 @@ p {
 	font-family: Suisse Int;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	line-height: 1em;
 	color: black;
 	line-height: 1.25em;
@@ -230,7 +232,7 @@ em {
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
 	h1 {
-		font-size: 2.9rem;
+		font-size: 3.75rem;
 		line-height:1em;
 		margin-bottom: 3vh;
 	}
@@ -311,11 +313,12 @@ em {
 }
 .about-text {
   width: 30vw;
+  padding-top: 10vh;
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.about {
-		grid-column: 1/31;
-		grid-row: 3/16;
+		grid-column: 1/36;
+		grid-row: 3/15;
 		flex-direction: row;
 	}
 }
@@ -936,8 +939,7 @@ z-index: 99999;
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.project_desc,
 	.Tester {
-		grid-column: 1/8;
-		grid-row: 2/17;
+	wix
 	}
 	.project-desc-text {
 		padding: 11vh 2vw;
@@ -1463,7 +1465,7 @@ section.slideshow.ng-scope {
 }
 h3 {
 	font-family: suisse int;
-	font-size: 4rem;
+	font-size: 6rem;
 	color: black;
 	line-height: 1.25em;
 }
@@ -1636,10 +1638,16 @@ svg#Layer_1 {
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.our-pixels {
-		grid-column: 1/36;
-		grid-row: 3/16;}
-		.our-pixels-names{	grid-column: 1/36;
-			grid-row: 3/16;}
+		grid-column: 1/15;
+		grid-row: 3/15;
+		}
+		.our-pixels-names{
+			grid-column: 15/38;
+			grid-row: 3/21;
+			margin-right: 13vw;
+			overflow: auto;
+			height: 38vh;
+			}
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
 	.our-pixels {

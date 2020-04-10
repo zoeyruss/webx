@@ -532,14 +532,14 @@ img {
 	opacity: .5;
 }
 .carousel-control.left {
-	width: 50vw;
+	width: 40vw;
 	height: 100vh;
 }
 .carousel-control.right {
 	right: 0;
 	left: auto;
 	height: 100vh;
-	width: 50vw;
+	width: 42vw;
 	background-repeat: repeat-x;
 }
 .carousel-control:focus,.carousel-control:hover {
@@ -661,9 +661,6 @@ div#carousel-1 {
 
 div#carousel-2 {
     grid-row: 31/53;
-    
-    background: red;
-
 }
 
 
