@@ -785,11 +785,11 @@ padding-left: 10vw;
 }
 	.our-pixels-poem-section {
 		overflow: auto;
-		height: 67.6vh;
+		height: 56vh;
 		flex-direction: column-reverse;
 		grid-column: 1/11;
 		flex-direction: column-reverse;
-		grid-row: 3/9;
+		grid-row: 3/8;
 		}
 		.our-pixels-text {
 			display: flex;
@@ -883,40 +883,16 @@ padding-left: 10vw;
 @media (max-width: 400px) and (min-width: 0px) {
   .about-section-container{
 		grid-column: 1/11;
-		grid-row: 3/9;
+		grid-row: 3/8;
 		flex-direction: column;
 		overflow: auto;
-		height: 67.8vh;
+		height: 55.8vh;
 		}
   .about-text {
     width: 93vw;
   }
 }
 /*Close About section */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*footer open*/
@@ -1002,7 +978,7 @@ h3.unknown-arrow:hover{
 }
 @media (max-width: 400px) and (min-width: 0px) {
 	.arrowstyle.left-arrow,
-	.arrowstyle.right-arrow {grid-row: 9/10;}
+	.arrowstyle.right-arrow {grid-row: 8/10;}
 	.arrowstyle.right-arrow {grid-column: 5/6;}
 			.arrowstyle.left-arrow{
 			grid-column: 1/2;
