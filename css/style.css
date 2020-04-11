@@ -305,7 +305,7 @@ li.menu-items {
 @media (max-width: 1799px) and (min-width: 1200px) {
 	.header{
 		grid-column: 1/24;
-		height: 8.9vh;
+		height: 9.2vh;
 		grid-row: 1/2;
 		padding-left: 3vw;
 		}
@@ -331,7 +331,7 @@ li.menu-items {
 }
 @media (max-width: 898px) and (min-width: 599px) {
 	.header{
-		height: 8.4vh;
+		height: 9vh;
 		grid-column: 1/15;
 		grid-row: 1/2;
 		}
@@ -522,6 +522,9 @@ li.menu-items {
     grid-row: span 2;
     grid-column: span 2;
 }
+.hide-div {
+    display: none;
+}
 }
 @media (max-width: 1199px) and (min-width: 899px) {
 	.hover-container {
@@ -535,6 +538,7 @@ li.menu-items {
     width: 20%;
 
 }
+
 }
 @media (max-width: 898px) and (min-width: 599px) {
 	.hover-container .one-hover:hover ~ .one-hover-child{
@@ -562,8 +566,246 @@ padding-left: 10vw;
     display: none;
 }
 }
-@media (max-width: 400px) and (min-width: 0px) {}
+@media (max-width: 400px) and (min-width: 0px) {
+		.project_desc {
+    grid-column: 1/10;
+    grid-row: 2/6;
+}
+	.hover-container .one-hover:hover ~ .one-hover-child{
+padding-left: 10vw;
+    top: 10%;
+	left: 0;
+	height: 20%;
+    width: 1000%;
+
+}
+.hide-div {
+    display: none;
+}
+}
 /*close main structure*/
+
+
+/*Open Poem section */
+
+.our-pixels-poem-section {
+	justify-content: space-between;
+	height: 100%;
+	display: flex;
+}
+.our-pixels-text {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-self: center;
+	width: 69%;
+	padding: 3rem;
+}
+.our-pixels-poem-heart-icon{
+	align-self: center;
+}
+@media (max-width: 3000px) and (min-width: 1800px) {
+	.our-pixels-poem-section {
+		grid-row: 4/15;
+		grid-column: 1/36;
+	}
+	.our-pixels-poem-heart-icon{
+	align-self: center;
+}
+}
+@media (max-width: 1799px) and (min-width: 1200px) {
+	.our-pixels-poem-section {
+    grid-row: 3/11;
+    grid-column: 1/31;
+}
+.our-pixels-poem-heart-icon{
+	align-self: center;
+}
+}
+@media (max-width: 1199px) and (min-width: 899px) {
+.our-pixels-poem-heart-icon{
+	align-self: center;
+}
+
+	.our-pixels-poem-section {
+		overflow: auto;
+		justify-content: space-between;
+		grid-column: 1/19;
+		padding: 12vh 2vw 3vh 0vw;
+		flex-direction: row-reverse;
+		grid-row: 3/11;
+		height: 57vh;
+}}
+@media (max-width: 898px) and (min-width: 599px) {
+  .our-pixels-poem-section {grid-column: 1/15;overflow: auto;height: 64vh;grid-row: 3/10;flex-direction: column-reverse;}
+.our-pixels-poem-heart-icon{
+	align-self: center;
+}
+.our-pixels-text {
+  width: 96vw;
+  padding: 1rem;
+}
+}
+@media (max-width: 598px) and (min-width: 401px) {
+.our-pixels-poem-heart-icon{
+	align-self: center;
+}
+	.our-pixels-poem-section {
+		overflow: auto;
+		height: 67vh;
+		flex-direction: column-reverse;
+		grid-column: 1/11;
+		padding: 0vh 2vw 3vh 0vw;
+		flex-direction: column-reverse;
+		grid-row: 3/10;
+		}
+		.our-pixels-text {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			align-self: center;
+			width: 49vw;
+			padding: 3rem;
+		}
+}
+@media (max-width: 400px) and (min-width: 0px) {
+.our-pixels-poem-heart-icon{
+	align-self: center;
+}
+	.our-pixels-poem-section {
+		overflow: auto;
+		height: 67.6vh;
+		flex-direction: column-reverse;
+		grid-column: 1/11;
+		flex-direction: column-reverse;
+		grid-row: 3/9;
+		}
+		.our-pixels-text {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			align-self: center;
+			width: 49vw;
+			padding: 4vh 0vw 3vh 0vw;
+}
+}
+/*Close Poem section */
+
+
+/*Open About section */
+
+.about-section-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0vh 0vw 0vh 4vw;
+    height: 100%;
+    grid-column: 1/31;
+		grid-row: 3/16;
+}
+.about-text {
+  width: 30vw;
+  padding-top: 10vh;
+}
+@media (max-width: 3000px) and (min-width: 1800px) {
+	.about-section-container{
+		grid-column: 1/36;
+		grid-row: 3/15;
+		flex-direction: row;
+	}
+	
+}
+@media (max-width: 1799px) and (min-width: 1200px) {
+  .about-section-container{
+		grid-column: 1/23;
+		display: flex;
+		grid-row: 3/10;
+		flex-direction: row;
+		}
+  .about-text {
+    width: 74%;
+    margin-right: 10vw;
+    padding: 2rem;
+  }
+}
+@media (max-width: 1199px) and (min-width: 899px) {
+	  .about-section-container{
+		grid-column: 1/19;
+		display: flex;
+		grid-row: 3/10;
+		flex-direction: row;
+		}
+		.about-text {
+  width: 80%;
+}
+}
+@media (max-width: 898px) and (min-width: 599px) {
+  .about-section-container{
+		grid-column: 1/15;
+		overflow: auto;
+		height: 72vh;
+		grid-row: 3/11;
+		flex-direction: column;
+		justify-content: center;
+		}
+  .about-text {
+    padding-top: 29vh;
+    width: auto;
+  }
+}
+@media (max-width: 598px) and (min-width: 401px) {
+  .about-section-container{
+		    overflow: auto;
+		    height: 64vh;
+		    flex-direction: column-reverse;
+		    grid-column: 1/13;
+		    padding: 0vh 2vw 3vh 0vw;
+		    flex-direction: column;
+		    grid-row: 3/10;
+}
+		
+  .about-text {
+  	padding:2vw 4vw;
+    width: 77vw;
+    margin-bottom: 8vh;
+  }
+}
+@media (max-width: 400px) and (min-width: 0px) {
+  .about-section-container{
+		grid-column: 1/11;
+		grid-row: 3/9;
+		flex-direction: column;
+		overflow: auto;
+		height: 67.8vh;
+		}
+  .about-text {
+    width: 93vw;
+  }
+}
+/*Close About section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*footer open*/
@@ -622,7 +864,7 @@ h3.unknown-arrow:hover{
 		grid-row: 11/12;
 	}
 	
-	.arrowstyle.right-arrow {grid-column: 22/23;}
+	.arrowstyle.right-arrow {grid-column: 21/23;}
 }
 @media (max-width: 1199px) and (min-width: 899px) {
 	.arrowstyle.left-arrow,
@@ -634,21 +876,26 @@ h3.unknown-arrow:hover{
 }
 @media (max-width: 898px) and (min-width: 599px) {
 	.arrowstyle.left-arrow,
-	.arrowstyle.right-arrow {grid-row: 11/13;}
+	.arrowstyle.right-arrow {grid-row: 11/12;}
 	.arrowstyle.right-arrow {
-	
-		grid-column: 13/15;
+	grid-column: 10/12;
 	}
 }
 @media (max-width: 598px) and (min-width: 401px) {
 	.arrowstyle.left-arrow,
 	.arrowstyle.right-arrow {grid-row: 10/11;justify-content: safe;}
-	.arrowstyle.right-arrow {grid-column: 8/10;}
+	.arrowstyle.right-arrow {grid-column: 9/10;}
+		.arrowstyle.left-arrow{
+			grid-column: 1/2;
+		}
 }
 @media (max-width: 400px) and (min-width: 0px) {
 	.arrowstyle.left-arrow,
-	.arrowstyle.right-arrow {grid-row: 8/10;}
+	.arrowstyle.right-arrow {grid-row: 9/10;}
 	.arrowstyle.right-arrow {grid-column: 5/6;}
+			.arrowstyle.left-arrow{
+			grid-column: 1/2;
+		}
 }
 /*close footer*/
 
@@ -664,7 +911,7 @@ p {
 	font-family: Suisse Int;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 1.25rem;
+	font-size: 1.2rem;
 	line-height: 1em;
 	color: black;
 	line-height: 1.25em;
@@ -672,87 +919,23 @@ p {
 }
 
 
-/*Open About section */
 
-.about {
-    display: flex;
-    justify-content: space-between;
-    padding: 0vh 0vw 0vh 4vw;
-    height: 100%;
-    grid-column: 1/31;
-		grid-row: 3/16;
-}
-.about-text {
-  width: 30vw;
-  padding-top: 10vh;
-}
-@media (max-width: 3000px) and (min-width: 1800px) {
-	.about {
-		grid-column: 1/36;
-		grid-row: 3/15;
-		flex-direction: row;
-	}
-}
-@media (max-width: 1799px) and (min-width: 1200px) {
-  .about {
-		grid-column: 1/31;
-		display: flex;
-		grid-row: 3/15;
-		flex-direction: row;
-		}
-  .about-text {
-    width: 49vw;
-    margin-right: 10vw;
-    padding: 2rem;
-  }
-}
-@media (max-width: 1199px) and (min-width: 899px) {}
-@media (max-width: 898px) and (min-width: 599px) {
-  .about {
-		grid-column: 1/15;
-		overflow: auto;
-		height: 74vh;
-		grid-row: 3/13;
-		flex-direction: column;
-		justify-content: center;
-		}
-  .about-text {
-    padding-top: 16vh;
-    width: auto;
-  }
-}
-@media (max-width: 598px) and (min-width: 401px) {
-  .about {
-		    overflow: auto;
-    height: 67vh;
-    flex-direction: column-reverse;
-    grid-column: 1/13;
-    padding: 0vh 2vw 3vh 0vw;
-    flex-direction: column-reverse;
-    grid-row: 3/13;
-}
-		
-  .about-text {
-  	padding:2vw 4vw;
-    width: 77vw;
-    margin-bottom: 8vh;
-  }
-}
-@media (max-width: 400px) and (min-width: 0px) {
-  .about {
-		grid-column: 1/12;
-		grid-row: 3/12;
-		flex-direction: column;
-		overflow: auto;
-		justify-content: flex-start;
-		padding-top: 6vh;
-		height: 64vh;
-		}
-  .about-text {
-    width: 93vw;
-  }
-}
-/*Close About section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .info {
 	z-index: 9;
@@ -835,103 +1018,7 @@ section.webx-info {
 
 /*Close Grid Structure*/
 
-/*Open Poem section */
 
-.our-pixels-poem {
-	justify-content: space-between;
-	height: 100%;
-	display: flex;
-}
-.our-pixels-text {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	align-self: center;
-	width: 49vw;
-	padding: 3rem;
-}
-@media (max-width: 3000px) and (min-width: 1800px) {
-	.our-pixels-poem {
-		grid-row: 4/15;
-		grid-column: 1/36;
-	}
-}
-@media (max-width: 1799px) and (min-width: 1200px) {
-	.our-pixels-poem {
-    grid-row: 3/13;
-    grid-column: 1/31;
-}
-}
-@media (max-width: 1199px) and (min-width: 899px) {
-
-	.our-pixels-poem {}
-	.our-pixels-poem {
-		overflow: auto;
-		height: 59vh;
-		justify-content: space-between;
-		grid-column: 1/24;
-		padding: 12vh 2vw 3vh 0vw;
-		flex-direction: row;
-		grid-row: 3/13;
-}}
-@media (max-width: 898px) and (min-width: 599px) {
-  .our-pixels-poem {grid-column: 1/15;overflow: auto;height: 67vh;grid-row: 3/11;flex-direction: column-reverse;}
-
-.our-pixels-text {
-  width: 96vw;
-  padding: 1rem;
-}
-}
-@media (max-width: 598px) and (min-width: 401px) {
-	.our-pixels-poem {}
-	.our-pixels-poem {
-		overflow: auto;
-		height: 67vh;
-		flex-direction: column-reverse;
-		grid-column: 1/13;
-		padding: 0vh 2vw 3vh 0vw;
-		flex-direction: column-reverse;
-		grid-row: 3/13;
-		}
-		.our-pixels-text {
-			display: flex;
-			justify-content: space-between;
-			flex-direction: column;
-			align-self: center;
-			width: 49vw;
-			padding: 3rem;
-		}
-}
-@media (max-width: 400px) and (min-width: 0px) {
-	.our-pixels-poem {}
-	.our-pixels-poem {
-		overflow: auto;
-		height: 62.6vh;
-		flex-direction: column-reverse;
-		grid-column: 1/11;
-		flex-direction: column-reverse;
-		grid-row: 3/11;
-		}
-		.our-pixels-text {
-			display: flex;
-			justify-content: space-between;
-			flex-direction: column;
-			align-self: center;
-			width: 49vw;
-			padding: 4vh 0vw 3vh 0vw;
-}
-}
-/*Close Poem section */
-
-
-@font-face {
-	font-family:unknown;
-	src:"fonts/Unknown-PX.ttf";
-}
-@font-face {
-	font-family:Suisse Int;
-	src:"fonts/SuisseIntl-Light.ttf";
-}
 a {
 	font-family: unset;
 	font-weight: 900;
