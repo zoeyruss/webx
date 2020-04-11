@@ -763,7 +763,7 @@ padding-left: 10vw;
 }
 	.our-pixels-poem-section {
 		overflow: auto;
-		height: 67vh;
+		height: 64vh;
 		flex-direction: column-reverse;
 		grid-column: 1/11;
 		padding: 0vh 2vw 3vh 0vw;
@@ -995,7 +995,7 @@ h3.unknown-arrow:hover{
 @media (max-width: 598px) and (min-width: 401px) {
 	.arrowstyle.left-arrow,
 	.arrowstyle.right-arrow {grid-row: 10/11;justify-content: safe;}
-	.arrowstyle.right-arrow {grid-column: 9/10;}
+	.arrowstyle.right-arrow {grid-column: 7/9;}
 		.arrowstyle.left-arrow{
 			grid-column: 1/2;
 		}
