@@ -62,13 +62,14 @@ body {
 
 /* open type styles*/
 
+
 .large-title {
 	font-family: titling-gothic-fb-extended, sans-serif;
 	font-style: normal;
 	font-weight: 900;
 	line-height: 1em;
 	letter-spacing: -0.05em;
-	font-size: 7vw;
+	font-size: 11vw;
 }
 h1 {
 	font-family: Suisse Int;
@@ -127,6 +128,22 @@ em {
 	font-size: 4rem;
 	line-height: 2em;
 }
+
+.number {
+	font-family: pixelnumber, sans-serif;
+}
+p {
+	font-family: Suisse Int;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.2rem;
+	line-height: 1em;
+	color: black;
+	line-height: 1.25em;
+	letter-spacing: .015em;
+}
+
+
 @media (max-width: 3000px) and (min-width: 1800px) {
 	h1 {
 		font-size: 3.75rem;
@@ -137,6 +154,15 @@ em {
 		font-size: 4rem;
 		line-height: 2em;
 	}
+	.large-title {
+	line-height: 1em;
+	letter-spacing: -0.05em;
+	font-size: 12vw;
+}
+	 .large-title em {
+	font-size: 12.75vw;
+	letter-spacing: 0.05em;
+}
 }
 	@media (max-width: 1799px) and (min-width: 1200px) { 
 		h1 {
@@ -148,22 +174,48 @@ em {
 			font-size: 4rem;
 			line-height: 2em;
 		}
-	 }
+	 .large-title em {
+	font-size: 12.75vw;
+	letter-spacing: 0.05em;
+}
+		.large-title {
+	line-height: 1em;
+	letter-spacing: -0.05em;
+	font-size: 11vw;
+}}
 @media (max-width: 1199px) and (min-width: 899px) {
 	h1 {
 		font-size:1.9rem;
 		line-height:1em;
 	}
+	.large-title em {
+	font-size: 12.75vw;
+	letter-spacing: 0.05em;
+}
 	.menu-items h5{
 		font-size: 4rem;
 		line-height: 2em;
 	}
+		.large-title {
+	line-height: 1em;
+	letter-spacing: -0.05em;
+	font-size: 11vw;
+}
 }
 @media (max-width: 898px) and (min-width: 599px) { 
 	h1 {
 		font-size:1.9rem;
 		line-height:1em;
 	}
+	.large-title em {
+	font-size: 14.75vw;
+	letter-spacing: 0.05em;
+}
+		.large-title {
+	line-height: 1em;
+	letter-spacing: -0.05em;
+	font-size: 13vw;
+}
 	.menu-items h5{
 		font-size: 4rem;
 		line-height: 2em;
@@ -174,7 +226,11 @@ em {
 		font-size:1.9rem;
 		margin-bottom: 3vh;
 		line-height: 1em;
-	}
+	} 
+	.large-title em {
+	font-size: 12.75vw;
+	letter-spacing: 0.05em;
+}
 	.menu-items h5{
 		font-size: 4rem;
 		line-height: 2em;
@@ -202,11 +258,12 @@ em {
 
 /*open Nav Bar*/
 .header {
-    
     padding-left: 14vw;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    height: 7vh;
+    grid-row: 1/2;
     align-items: flex-end;
 }
 
@@ -293,7 +350,7 @@ li.menu-items {
 }
 
 @media (max-width: 3000px) and (min-width: 1800px) {
-	.header{grid-column: 1/36;}
+	.header{grid-column: 1/41;height: 4.75vh;grid-row: 1;}
 		
 	svg#Logo_SVG {
 			height: 5vh;
@@ -368,8 +425,49 @@ li.menu-items {
 	
 }
 /*close Nav Bar */
+/*Open Landing-Page*/
+.landing-page{display: flex;flex-direction: column;height:100vh;justify-content: center;}
+.mica-logo {
+	height: 6vh;
+	width: 6vw;
+	margin-left: 0vw;
+}
+.landing-page-info{
+	width: 50%;
+}
+.landing-page-info p{
+font-size: 1.5rem;
+}
+@media (max-width: 3000px) and (min-width: 1800px) {
+	.landing-page{
+display: flex;
 
+}
+.landing-page-info p{font-size: 2.5rem;}
+.landing-page-info{
+	width: 54%;
+	margin-left: 2vw;
+}
 
+.mica-logo {
+	height: 12vh;
+	width: 9vw;
+	margin-left: 2vw;
+}
+}
+@media (max-width: 1799px) and (min-width: 1200px) {
+	.landing-page{display: flex;height: 100vh;flex-direction: column;justify-content: space-between;}
+.mica-logo {
+	height: 6vh;
+	width: 6vw;
+	margin-left: 0vw;
+}
+}
+@media (max-width: 1199px) and (min-width: 899px) {}
+@media (max-width: 898px) and (min-width: 599px) {}
+@media (max-width: 598px) and (min-width: 401px) {}
+@media (max-width: 400px) and (min-width: 0px) {}
+/*Close Landing-Page*/
 /*Welcome Page open */
 
 .welcome-section {
@@ -387,10 +485,10 @@ li.menu-items {
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.welcome-section {
-		grid-column: 1/19;
+		grid-column: 1/26;
 		display: flex;
 		padding: 0vh 20vw 0vh 6vw;
-		grid-row: 4/13;
+		grid-row: 6/20;
 	}
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
@@ -513,8 +611,20 @@ li.menu-items {
 
 @media (max-width: 3000px) and (min-width: 1800px) {
 		.hover-container {
-    grid-row: span 2;
-    grid-column: span 2;
+    grid-row: span 4;
+    grid-column: span 4;
+}
+	.hover-container .one-hover:hover ~ .one-hover-child{
+padding-left: 5vw;
+    top: 10%;
+	left: 0;
+	height: 60%;
+    width: 13%;
+
+}
+.project_desc {
+	grid-column: 1/9;
+	grid-row: 3/19;
 }
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
@@ -606,8 +716,8 @@ padding-left: 10vw;
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.our-pixels-poem-section {
-		grid-row: 4/15;
-		grid-column: 1/36;
+		grid-row: 4/18;
+		grid-column: 1/41;
 	}
 	.our-pixels-poem-heart-icon{
 	align-self: center;
@@ -708,8 +818,8 @@ padding-left: 10vw;
 }
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.about-section-container{
-		grid-column: 1/36;
-		grid-row: 3/15;
+		grid-column: 1/41;
+		grid-row: 4/18;
 		flex-direction: row;
 	}
 	
@@ -850,12 +960,12 @@ h3.unknown-arrow:hover{
 @media (max-width: 3000px) and (min-width: 1800px) {
 	.arrowstyle.left-arrow,
 .arrowstyle.right-arrow{
-    grid-row: 15/17;
+    grid-row: 19/22;
 }
 	
 	
 	.arrowstyle.right-arrow {
-		grid-column: 34/36;
+		grid-column: 39/41;
 	}
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
@@ -899,32 +1009,6 @@ h3.unknown-arrow:hover{
 }
 /*close footer*/
 
-.mica-logo {
-	height: 6vh;
-	width: 6vw;
-	margin-left: 0vw;
-}
-.number {
-	font-family: pixelnumber, sans-serif;
-}
-p {
-	font-family: Suisse Int;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 1.2rem;
-	line-height: 1em;
-	color: black;
-	line-height: 1.25em;
-	letter-spacing: .015em;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -951,10 +1035,6 @@ p {
 	-ms-transform: translate(-50%, -50%);
 	font-size: 6.5rem;
 	transform: translate(-50%, -50%);
-}
-section.webx-info {
-	grid-column: 2/7;
-	grid-row: 3;
 }
 
 .button_one {
@@ -1318,96 +1398,6 @@ h3 {
 	position: absolute;
 	width: 100%;
 	min-height: 100%;
-}
-/* grid background */
-
-undefined .container-two div,
-{
-	background-color: none;
-}
-.container div,
-{
-	background-color: white;
-	border-left: lightgray solid .1px;
-	border-bottom: lightgray solid .1px;
-}
-.container div::before {
-	content: "";
-	padding-bottom: 100%;
-	display: inline-block;
-	vertical-align: top;
-}
-.container-two div::before {
-	content: "";
-	padding-bottom: 100%;
-	display: inline-block;
-	vertical-align: top;
-}
-.container-two {
-	display: grid;
-	grid-row: 1;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-column: 1/23;
-}
-.container-three {
-	display: grid;
-	grid-row: 1;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-column: 1/23;
-}
-.container {
-	display: grid;
-	grid-row: 1;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-column: 1/23;
-}
-.container div {
-	background-color: ;
-	border-left: lightgray solid .1px;
-	border-bottom: lightgray solid .1px;
-}
-.container-two div {
-	background-color: ;
-	border-left: solid .1px;
-	border-bottom: solid .1px;
-}
-.container div::before,
-.container-two div::before {
-	content: "";
-	padding-bottom: 100%;
-	display: inline-block;
-	vertical-align: top;
-}
-.container .fill-div {
-	border-bottom: none;
-	border-left: none;
-	background-color: white;
-}
-.container .border-bottom {
-	border-bottom: gray solid .5px;
-}
-.fill-div.grow.border-none,
-.slideshow-two.border-none {
-	border-bottom: none;
-	border-left: none;
-}
-.container .hover {
-	background-color: white;
-}
-.container .hover:hover {
-	background-color: ;
-}
-.container .hover:hover .container .fill-div {
-	background-color: ;
-}
-.hover-container .one-hover,
-#parent {
-	cursor: pointer;
-	grid-row-start:;
-}
-.hover-container .one-hover:hover ~ .sibling-highlight {
-	background-color: ;
-	color: white;
 }
 
 
