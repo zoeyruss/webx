@@ -312,6 +312,7 @@ svg#Logo_SVG {
 }
 .nav-active{
 	padding-top: 2vh;
+	position: absolute;
 	height: 100vh;
 	background: #11D2CC;
 	text-align: left;
