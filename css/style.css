@@ -202,15 +202,14 @@ em {
 
 /*open Nav Bar*/
 .header {
-    grid-column: 1/31;
-    grid-row: 1/2;
+    
     padding-left: 14vw;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     align-items: flex-end;
-    height: 8.3vh;
 }
+
 svg#Logo_SVG {
     height: 8vh;
     width: 8vw;
@@ -294,8 +293,9 @@ li.menu-items {
 }
 
 @media (max-width: 3000px) and (min-width: 1800px) {
-	.header{grid-column: 1/36;height:;}
-		svg#Logo_SVG {
+	.header{grid-column: 1/36;}
+		
+	svg#Logo_SVG {
 			height: 5vh;
 			width: 8vw;
 		}
@@ -305,6 +305,7 @@ li.menu-items {
 @media (max-width: 1799px) and (min-width: 1200px) {
 	.header{
 		grid-column: 1/24;
+		height: 8.9vh;
 		grid-row: 1/2;
 		padding-left: 3vw;
 		}
@@ -317,13 +318,14 @@ li.menu-items {
 }
 @media (max-width: 1199px) and (min-width: 899px) {
 	.header{
-		height: 6.4vh;
-		grid-column: 1/24;
+		height: 9vh;
+		grid-column: 1/19;
 		grid-row: 1/2;
 		}
+		
 		svg#Logo_SVG {
-			height: 8vh;
-			width: 31vw;
+			height: 7vh;
+			width: 13vw;
 		}
 
 }
@@ -342,7 +344,7 @@ li.menu-items {
 @media (max-width: 598px) and (min-width: 401px) {
 	.header{
 		height: 9.6vh;
-		grid-column: 1/8;
+		grid-column: 1/10;
 		grid-row: 1/2;
 		}
 		svg#Logo_SVG {
@@ -444,11 +446,22 @@ li.menu-items {
 
 
 /*Open Grid of images (Main Webx) Section*/
-.one-hover:hover ~ .one-hover-child{
-	background-color: white;
-	color: white;
-	z-index: 9;
-	opacity: 1;
+.hover-container {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+.hover-container .one-hover:hover ~ .one-hover-child{
+    background-color: white;
+    color: white;
+    z-index: 9;
+    opacity: 1;
+    top: 20%;
+    left: 0;
+    width: 15%;
+    overflow: auto;
+    position: absolute;
+    padding: 7vh 1vw 1vh 1vw;
+    display: block;
 }
 .grid img {
 	object-fit: cover;
@@ -469,19 +482,12 @@ li.menu-items {
 	pointer-events: visible;
 }
 
-.one-hover-child {
+.hover-container .one-hover-child {
 	opacity: 0;
+	display: none;
 }
 
-.tester {
-	grid-column: 1/4;
-	grid-column: 1/5;
-	grid-row: 2/5;
-	overflow: auto;
-	grid-row: 3/10;
-	padding: 7vh 1vw 1vh  1vw;
-	}
-  
+
 
 .grid img {
 	object-fit: cover;
@@ -505,11 +511,57 @@ li.menu-items {
 
 
 
-@media (max-width: 3000px) and (min-width: 1800px) {}
-@media (max-width: 1799px) and (min-width: 1200px) {}
-@media (max-width: 1199px) and (min-width: 899px) {}
-@media (max-width: 898px) and (min-width: 599px) {}
-@media (max-width: 598px) and (min-width: 401px) {}
+@media (max-width: 3000px) and (min-width: 1800px) {
+		.hover-container {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+}
+@media (max-width: 1799px) and (min-width: 1200px) {
+	.hover-container {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+}
+@media (max-width: 1199px) and (min-width: 899px) {
+	.hover-container {
+    grid-row: span 1;
+    grid-column: span 1;
+}
+	.hover-container .one-hover:hover ~ .one-hover-child{
+
+    top: 20%;
+    left: 0;
+    width: 20%;
+
+}
+}
+@media (max-width: 898px) and (min-width: 599px) {
+	.hover-container .one-hover:hover ~ .one-hover-child{
+
+    top: 20%;
+    left: 0;
+    width: 40%;
+
+}
+}
+@media (max-width: 598px) and (min-width: 401px) {
+	.project_desc {
+    grid-column: 1/10;
+    grid-row: 2/5;
+}
+	.hover-container .one-hover:hover ~ .one-hover-child{
+padding-left: 10vw;
+    top: 10%;
+	left: 0;
+	height: 20%;
+    width: 1000%;
+
+}
+.hide-div {
+    display: none;
+}
+}
 @media (max-width: 400px) and (min-width: 0px) {}
 /*close main structure*/
 
@@ -521,7 +573,7 @@ li.menu-items {
     justify-content: center;
     grid-row: 15/17;
 }
-.arrowstyle.left-arrow {grid-column: 1/2;}
+.arrowstyle.left-arrow {grid-column: 1/3;}
 
 .arrowstyle.right-arrow{
     grid-column: 28/30;
@@ -567,18 +619,17 @@ h3.unknown-arrow:hover{
 @media (max-width: 1799px) and (min-width: 1200px) {
 	.arrowstyle.left-arrow,
 	.arrowstyle.right-arrow{
-		grid-row: 11/13;
+		grid-row: 11/12;
 	}
 	
-	.arrowstyle.right-arrow {grid-column: 21/24;}
+	.arrowstyle.right-arrow {grid-column: 22/23;}
 }
 @media (max-width: 1199px) and (min-width: 899px) {
 	.arrowstyle.left-arrow,
-	.arrowstyle.right-arrow {grid-row: 15/17;}
+	.arrowstyle.right-arrow {grid-row: 11/12;}
 
 	.arrowstyle.right-arrow {
-	
-		grid-column: 21/24;
+	grid-column: 17/19;
 	}
 }
 @media (max-width: 898px) and (min-width: 599px) {
@@ -591,8 +642,8 @@ h3.unknown-arrow:hover{
 }
 @media (max-width: 598px) and (min-width: 401px) {
 	.arrowstyle.left-arrow,
-	.arrowstyle.right-arrow {grid-row: 10/12;justify-content: safe;}
-	.arrowstyle.right-arrow {grid-column: 7/7;}
+	.arrowstyle.right-arrow {grid-row: 10/11;justify-content: safe;}
+	.arrowstyle.right-arrow {grid-column: 8/10;}
 }
 @media (max-width: 400px) and (min-width: 0px) {
 	.arrowstyle.left-arrow,
@@ -1262,29 +1313,17 @@ undefined .container-two div,
 .container .hover:hover .container .fill-div {
 	background-color: ;
 }
-.one-hover,
+.hover-container .one-hover,
 #parent {
 	cursor: pointer;
 	grid-row-start:;
 }
-.one-hover:hover ~ .sibling-highlight {
+.hover-container .one-hover:hover ~ .sibling-highlight {
 	background-color: ;
 	color: white;
 }
-.two-hover:hover ~ .sibling-highlight {
-	background-image: url(images/1.png);
-	background-repeat: no-repeat;
-	color: white;
-}
-section.profile-images-container {
-	grid-column: 1/8;
-	grid-row: 6/14;
-}
-.section-1 {
-	background: ;
-	grid-column: 1/4;
-	grid-row: 2/6;
-}
+
+
 /*open our-pixels page*/
 
 .our-pixels {

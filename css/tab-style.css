@@ -761,7 +761,12 @@ div#carousel-2{
 	}
 	div#carousel-1, div#carousel-2 {
 		grid-column: 1/11;
-	}}
+	}
+
+.hide-dv{
+	display: ;
+}
+}
 
 
 @media (max-width: 379px) and (min-width: 0px) {
