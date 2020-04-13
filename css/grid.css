@@ -114,6 +114,9 @@ em {
 	font-size: 4rem;
 	line-height: 2em;
 }
+.gd-blue{
+	color: #11EDD3;	
+}
 
 .number {
 	font-family: pixelnumber, sans-serif;
@@ -137,6 +140,8 @@ p {
 		font-size: 3.75rem;
 		line-height:1em;
 		margin-bottom: 3vh;
+		magin-top: 3vh;
+		margin-top: 2vh;
 	}
 	.menu-items h5{
 		font-size: 4rem;
@@ -246,6 +251,7 @@ p {
 .header {
     display: flex;
     justify-content: space-evenly;
+    background: white;
     flex-direction: row;
     height: 7vh;
     position: sticky;
@@ -522,13 +528,26 @@ align-items: center;
 
 /*Welcome Section Open*/
 .welcome-section {
-    grid-row: 3/9;
+    grid-row: 2/7;
     padding: 5rem;
-	grid-column: 1/11;
-
-
-	transition: ease .4s;
-
+    grid-column: 2/11;
+    transition: ease .4s;
+}
+.our-story-header-section {
+    grid-row: 10/13;
+    padding: 5rem;
+    grid-column: 3/8;
+}
+.pixels-poem-section {
+    grid-row: 10/19;
+    grid-column: 13/19;
+}.our-pixels-arrow-next {
+    grid-row: 8/9;
+    grid-column: 8/15;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
 }
  @media only screen and (min-width: 768px) {
         :root {
