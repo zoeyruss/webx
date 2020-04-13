@@ -87,6 +87,11 @@ h5 {
 	font-weight: bold;
 	font-size: 2.25rem;
 }
+h6 {
+	font-family: Suisse Int;
+	font-style: normal;
+	font-size: .75rem;
+}
 .dropdown h5 {
 	font-family: Suisse Int;
 	font-style: normal;
@@ -115,7 +120,8 @@ em {
 	line-height: 2em;
 }
 .gd-blue{
-	color: #11EDD3;	
+	color: #11EDD3;
+	margin-bottom: 3vh;
 }
 
 .number {
@@ -527,28 +533,21 @@ align-items: center;
 /*close Nav Bar */
 
 /*Welcome Section Open*/
-.welcome-section {
-    padding: 5em;
-    grid-row: 2/7;
-    grid-column: 2/11;
-    transition: ease .4s;
+.section-global-styles{
+    padding: 2em;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    display: flex;
+    grid-column: 1/5;
 }
+.welcome-section {grid-row: 1/5;}
 .our-story-header-section {
-    grid-row: 10/13;
-    padding: 5rem;
-    grid-column: 3/8;
+    grid-row: 7/9;
 }
 .pixels-poem-section {
-    grid-row: 10/20;
-    padding: 5em;
-    grid-column: 13/19;
+    grid-row: 10/19;
 }
 .our-pixels-arrow-next {
-    grid-row: 8/9;
-    grid-column: 8/15;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 100%;
+    grid-row: 5/6;
 }
- 
