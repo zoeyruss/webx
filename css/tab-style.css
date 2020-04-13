@@ -727,6 +727,7 @@ div#carousel-2{
 	div#carousel-1 {
 		z-index: 1;
 		background: white;
+		
 		height: 82vh;
 		grid-row: 3/16;
 		border: black solid 1px;
