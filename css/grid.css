@@ -528,8 +528,8 @@ align-items: center;
 
 /*Welcome Section Open*/
 .welcome-section {
+    padding: 5em;
     grid-row: 2/7;
-    padding: 5rem;
     grid-column: 2/11;
     transition: ease .4s;
 }
@@ -539,9 +539,11 @@ align-items: center;
     grid-column: 3/8;
 }
 .pixels-poem-section {
-    grid-row: 10/19;
+    grid-row: 10/20;
+    padding: 5em;
     grid-column: 13/19;
-}.our-pixels-arrow-next {
+}
+.our-pixels-arrow-next {
     grid-row: 8/9;
     grid-column: 8/15;
     justify-content: center;
@@ -549,163 +551,4 @@ align-items: center;
     display: flex;
     height: 100%;
 }
- @media only screen and (min-width: 768px) {
-        :root {
-            --padding-v: 5.5rem;
-            --padding-h:7.5rem
-        }
-    }
-
-    html {
-        font-family: NeueHaasGrotesk, Helvetica Neue, Helvetica, Arial, sans-serif;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        -webkit-tap-highlight-color: transparent;
-        background-color: #fff;
-        background-color: var(--background-color);
-        font-size:2.60417vw
-    }
-
-    @media only screen and (max-width: 768px) and(orientation: landscape) {
-        html {
-            font-size:1.42857vw
-        }
-    }
-
-    @media only screen and (min-width: 768px) {
-        html {
-            font-size:1vw
-        }
-    }
-
-    @media only screen and (min-width: 960px) {
-        html {
-            font-size:.69444vw
-        }
-    }
-
-    ::-moz-selection {
-        background:rgba(0, 0, 0, .4)
-    }
-
-    ::selection {
-        background:rgba(0, 0, 0, .4)
-    }
-
-    ::-webkit-scrollbar {
-        display:none
-    }
-
-    body, html {
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        -ms-scroll-chaining: none;
-        overscroll-behavior:none
-    }
-
-    *, :after, :before {
-        box-sizing: border-box;
-        margin: 0;
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout:none
-    }
-
-    button {
-        border: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background: 0 0;
-        border-radius: 0;
-        outline: 0;
-        cursor:pointer
-    }
-
-    a {
-        text-decoration: none;
-        color: #000;
-        color:var(--main-color)
-    }
-
-    .nuxt-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        width: 0;
-        opacity: 1;
-        -webkit-transition: width .1s, opacity .4s;
-        transition: width .1s, opacity .4s;
-        background-color: #fff;
-        z-index:999999
-    }
-
-    .nuxt-progress.nuxt-progress-notransition {
-        -webkit-transition: none;
-        transition:none
-    }
-
-    .nuxt-progress-failed {
-        background-color:red
-    }
-
-    .char {
-        padding: 0 .1em;
-        margin:0 -.1em
-    }
-
-    #app.darkmode [style^=background-image], #app.darkmode img {
-        -webkit-filter: invert(1);
-        filter:invert(1)
-    }
-
-    .global[data-v-399b5c70] {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: var(--background-color);
-        -webkit-transition: background-color .5s cubic-bezier(.445, .05, .55, .95) .5s;
-        transition:background-color .5s cubic-bezier(.445, .05, .55, .95) .5s
-    }
-
-    .global.black[data-v-399b5c70] {
-        background-color: #000;
-        -webkit-transition: background-color .5s cubic-bezier(.445, .05, .55, .95) 0s;
-        transition:background-color .5s cubic-bezier(.445, .05, .55, .95) 0s
-    }
-
-    .cover[data-v-399b5c70] {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none;
-        -webkit-transform-origin: center bottom;
-        transform-origin: center bottom;
-        overflow: hidden;
-        will-change:transform
-    }
-
-    .cover img[data-v-399b5c70] {
-        width: 100%;
-        height: 150vh;
-        position: relative;
-        top: -25vh;
-        -o-object-fit: cover;
-        object-fit:cover
-    }
-
-}
+ 
