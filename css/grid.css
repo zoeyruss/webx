@@ -42,6 +42,7 @@ body {
 	overflow: auto;
 	width: 100vw;
 	scroll-behavior: smooth;
+
 }
 
 
@@ -66,11 +67,10 @@ h1 {
 	line-height: 48px;
 }
 h2 {
-	font-size: calc(36px + (36 - 12) * ((100vw - 300px) / (1799 - 300)));
+	font-size: 2.5rem;
 	line-height: calc(1.6em + (1.5 - 1.2) * ((100vw - 300px)/(1799 - 300)));
 	letter-spacing: .03em;
 	text-align: left;
-	color: #11EDD3;
 	font-family: neue-haas-grotesk-display, sans-serif;
 	font-weight: 900;
 	font-style: normal;
@@ -90,7 +90,7 @@ h5 {
 h6 {
 	font-family: Suisse Int;
 	font-style: normal;
-	font-size: .75rem;
+	font-size: 1.25rem;
 }
 .dropdown h5 {
 	font-family: Suisse Int;
@@ -131,7 +131,7 @@ p {
 	font-family: Suisse Int;
 	font-style: normal;
 	font-weight: 300;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	line-height: 1em;
 	color: black;
 	line-height: 1.25em;
@@ -147,7 +147,7 @@ p {
 		line-height:1em;
 		margin-bottom: 3vh;
 		magin-top: 3vh;
-		margin-top: 2vh;
+		margin-top: 1vh;
 	}
 	.menu-items h5{
 		font-size: 4rem;
@@ -223,7 +223,7 @@ p {
 
 .grid {
 	display:grid;
-	grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
 	grid-auto-rows:1fr;
 	top:0;
 }
@@ -534,7 +534,7 @@ align-items: center;
 
 /*Welcome Section Open*/
 .section-global-styles{
-    padding: 2em;
+    padding: 1em;
     justify-content: center;
     flex-direction: column;
     background: white;
@@ -543,11 +543,113 @@ align-items: center;
 }
 .welcome-section {grid-row: 1/5;}
 .our-story-header-section {
-    grid-row: 7/9;
+	grid-row: 7/9;
 }
 .pixels-poem-section {
-    grid-row: 10/19;
+	grid-row: 9/19;
 }
 .our-pixels-arrow-next {
-    grid-row: 5/6;
+    grid-row: 5/7;
+    flex-direction: row;
+ }
+
+.our-pixels-arrow-next.section-global-styles {}
+.unknown-symbol{
+	font-family: unknown;
+	
 }
+
+#arrow_svg{
+height:3vh;
+margin-left: 3vw;
+color: #11EDD3;
+
+}
+.checkers_svg{
+	grid-row:6/7;
+	grid-column: 9/10;
+	opacity: 0;
+	height: ;
+	transition: all ease-in-out .4s;
+}
+.checkers_svg:hover{
+opacity: 1;
+}
+
+
+@media (max-width: 3000px) and (min-width: 1800px) {
+
+		
+		
+	.welcome-section {
+		grid-row: 2/10;
+		padding: 6em;
+		grid-column: 2/16;
+		}
+	.our-story-header-section {
+		grid-row: 11/15;
+		grid-column: 9/14;
+		grid-column: 3/8;
+		}
+	.pixels-poem-section {
+		grid-row: 14/27;
+		grid-column: 13/26;
+		padding: 2vw 3vh 3vw 6vh;
+		}
+	.our-pixels-arrow-next {
+		grid-row: 11/12;
+		padding: 1em;
+		grid-column: 15/22;
+		}
+}
+@media (max-width: 1799px) and (min-width: 1200px) {
+	.welcome-section {
+	grid-row: 2/6;
+	grid-column: 2/9;
+	}
+.our-story-header-section {
+	grid-row: 9/11;
+	grid-column: 9/14;
+	grid-column: 2/5;
+	}
+.pixels-poem-section {
+    grid-row: 9/16;
+    grid-column: 6/13;
+    }
+.our-pixels-arrow-next {
+    grid-row: 7/8;
+    grid-column: 7/11;
+    }}
+@media (max-width: 1199px) and (min-width: 899px) {}
+@media (max-width: 898px) and (min-width: 599px) {}
+@media (max-width: 598px) and (min-width: 401px) {}
+@media (max-width: 400px) and (min-width: 0px) {}
+
+
+/*smiley scroll open*/
+body {
+  background-color: #fafafa;
+  height:2000px;
+}
+
+div.container-smiley-logo {
+  display: flex;
+  height: 10vh;
+  width: 20%;
+  top: 50vh;
+  right: 0;
+  position:fixed;
+  z-index: 999;
+}
+
+svg#logo {
+  width:;
+height:;
+  transition: all, .2s ease-out;
+}
+
+
+
+
+
+/*smiley scroll close*/
