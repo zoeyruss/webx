@@ -146,7 +146,7 @@ p {
 		font-size: 3.75rem;
 		line-height:1em;
 		margin-bottom: 3vh;
-		magin-top: 3vh;
+
 		margin-top: 1vh;
 	}
 	.menu-items h5{
@@ -273,7 +273,7 @@ svg#Logo_SVG {
     width: 6vw;
 }
 .logo{
-	height:;
+
 	display: flex;
 	z-index: 99;
 	position: absolute;
@@ -541,9 +541,13 @@ align-items: center;
     display: flex;
     grid-column: 1/5;
 }
-.welcome-section {grid-row: 1/5;}
+.welcome-section {grid-row: 1/4;
+	
+  
+}
 .our-story-header-section {
 	grid-row: 7/9;
+
 }
 .pixels-poem-section {
 	grid-row: 9/19;
@@ -551,12 +555,24 @@ align-items: center;
 .our-pixels-arrow-next {
     grid-row: 5/7;
     flex-direction: row;
- }
 
-.our-pixels-arrow-next.section-global-styles {}
+
+}
+.pixels-poem-section {
+	grid-row: 10/17;
+
+  
+
+}
+.our-pixels-arrow-next {
+    grid-row: 5/6;
+	flex-direction: row;
+}
+
 .unknown-symbol{
 	font-family: unknown;
 	
+
 }
 
 #arrow_svg{
@@ -569,7 +585,7 @@ color: #11EDD3;
 	grid-row:6/7;
 	grid-column: 9/10;
 	opacity: 0;
-	height: ;
+
 	transition: all ease-in-out .4s;
 }
 .checkers_svg:hover{
@@ -579,8 +595,31 @@ opacity: 1;
 
 @media (max-width: 3000px) and (min-width: 1800px) {
 
-		
-		
+
+}
+
+#arrow_svg{
+height:3vh;
+margin-left: 3vw;
+color: #11EDD3;
+
+}
+.checkers_svg{
+	grid-row:6/7;
+	grid-column: 9/10;
+	opacity: 0;
+	
+	transition: all ease-in-out .4s;
+}
+.checkers_svg:hover{
+opacity: 1;
+}
+
+
+@media (max-width: 3000px) and (min-width: 1800px) {
+	#arrow_svg{
+	display: none;}
+
 	.welcome-section {
 		grid-row: 2/10;
 		padding: 6em;
@@ -592,10 +631,14 @@ opacity: 1;
 		grid-column: 3/8;
 		}
 	.pixels-poem-section {
+
 		grid-row: 14/27;
 		grid-column: 13/26;
 		padding: 2vw 3vh 3vw 6vh;
-		}
+
+		grid-row: 14/25;
+		grid-column: 13/26;
+	}
 	.our-pixels-arrow-next {
 		grid-row: 11/12;
 		padding: 1em;
@@ -643,8 +686,7 @@ div.container-smiley-logo {
 }
 
 svg#logo {
-  width:;
-height:;
+
   transition: all, .2s ease-out;
 }
 
