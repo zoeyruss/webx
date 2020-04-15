@@ -39,10 +39,9 @@ a {
 html,
 body {
 	height: auto;
-	overflow: auto;
+	overflow-x: hidden;
 	width: 100vw;
 	scroll-behavior: smooth;
-
 }
 
 
@@ -157,7 +156,7 @@ p {
 }
 	@media (max-width: 1799px) and (min-width: 1200px) { 
 		h1 {
-			font-size: 1.9rem;
+			font-size: 5rem;
 			line-height:1em;
 			margin-bottom: 5vh;
 		}
@@ -542,8 +541,6 @@ align-items: center;
     grid-column: 1/5;
 }
 .welcome-section {grid-row: 1/4;
-	
-  
 }
 .our-story-header-section {
 	grid-row: 7/9;
@@ -581,6 +578,16 @@ margin-left: 3vw;
 color: #11EDD3;
 
 }
+svg#Layer_1 {
+  	transition: all ease-in-out .4s;
+  	height: 7vh;
+  	text-align: center;
+  	display: flex;
+	  border:none;
+	  opacity: 0;
+  	align-self: center;
+  	justify-self: center;
+}
 .checkers_svg{
 	grid-row:6/7;
 	grid-column: 9/10;
@@ -588,15 +595,12 @@ color: #11EDD3;
 
 	transition: all ease-in-out .4s;
 }
-.checkers_svg:hover{
+svg#Layer_1:hover{
 opacity: 1;
 }
 
 
-@media (max-width: 3000px) and (min-width: 1800px) {
 
-
-}
 
 #arrow_svg{
 height:3vh;
@@ -605,10 +609,10 @@ color: #11EDD3;
 
 }
 .checkers_svg{
-	grid-row:6/7;
-	grid-column: 9/10;
-	opacity: 0;
-	
+	grid-row: 8/9;
+	grid-column: 7/8;
+	padding: 1rem;
+	opacity: 2;
 	transition: all ease-in-out .4s;
 }
 .checkers_svg:hover{
@@ -647,22 +651,24 @@ opacity: 1;
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
 	.welcome-section {
-	grid-row: 2/6;
-	grid-column: 2/9;
+	grid-row: 2/8;
+	grid-column: 2/13;
 	}
 .our-story-header-section {
-	grid-row: 9/11;
+	grid-row: 11/15;
 	grid-column: 9/14;
-	grid-column: 2/5;
+	grid-column: 2/6;
 	}
 .pixels-poem-section {
-    grid-row: 9/16;
-    grid-column: 6/13;
+    grid-row: 11/23;
+    grid-column: 9/17;
+    padding: 5em;
     }
 .our-pixels-arrow-next {
-    grid-row: 7/8;
-    grid-column: 7/11;
-    }}
+    grid-row: 9/10;
+    grid-column: 9/16;
+    }
+}
 @media (max-width: 1199px) and (min-width: 899px) {}
 @media (max-width: 898px) and (min-width: 599px) {}
 @media (max-width: 598px) and (min-width: 401px) {}
@@ -670,28 +676,59 @@ opacity: 1;
 
 
 /*smiley scroll open*/
-body {
-  background-color: #fafafa;
-  height:2000px;
+
+.smiley_scroll {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+
 }
 
-div.container-smiley-logo {
-  display: flex;
-  height: 10vh;
-  width: 20%;
-  top: 50vh;
+.smiley_svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.smiley_text {opacity:0;background-color: black;color: #fff;text-align: center;border-radius:;padding: 5px 0;
+
+  /* Position the tooltip */position: absolute;z-index: 1;}
+
+.smiley_scroll:hover .smiley_text {
+  opacity: 1;
+}
+.smiley_scroll {
+  position: fixed;
   right: 0;
-  position:fixed;
-  z-index: 999;
+  justify-content: flex-end;
+  display: flex;
+  top: 50%;
+  max-width: 6vw;
 }
 
-svg#logo {
+.smiley_svg {
+  display: block;
+  width: 7vw;
+  height: auto;
+}
 
-  transition: all, .2s ease-out;
+.smiley_text {
+	border-radius: 0;
+	visibility: hidden;
+	transition: ease-in-out .4s;
+	
+	background-color: #11EDD3;
+	
+	color: #fff;text-align: 
+	left;height:0vh;border: black solid 2px;padding: 3vw 1vh;
+
+  /* Position the tooltip */right: 54%;position: absolute;z-index: 1;width: 17vw;}
+
+.smiley_scroll:hover .smiley_text {
+
+  visibility: visible;
+  height: auto;
 }
 
 
-
-
-
-/*smiley scroll close*/
+/*smiley scroll close*/ 
