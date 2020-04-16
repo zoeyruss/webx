@@ -4,6 +4,11 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	src: "fonts/Unknown-PX.ttf";
 }
 @font-face {
+	font-family:Suisse Int Med;
+	src: url(fonts/SuisseIntl-Medium.otf);
+}
+
+@font-face {
 	font-family: pixel;
 	src: url(fonts/OnePixel.ttf);
 }
@@ -11,10 +16,7 @@ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre
 	font-family: pixelsymbol;
 	src: url(fonts/OnePixelNumbers.ttf);
 }
-@font-face {
-	font-family: pixelnumber;
-	src: url(fonts/OnePixelNumbers.ttf);
-}
+
 @font-face {
 	src: url(fonts/SuisseIntl-Light.ttf);
 	font-family: Suisse Int;
@@ -47,44 +49,57 @@ body {
 
 
 
-
 /* open type styles*/
 
 *{	font-style: normal;
 	font-family: Suisse Int;
-
+	box-sizing: border-box;
 }
 .large-title {
-
-
 	font-weight: 900;
 	line-height: 1em;
 	letter-spacing: -0.05em;
 	font-size: 11vw;
 }
+h1,
+h2,
+h3{
+	text-transform: uppercase;
+}
+
 h1 {
-	font-family: Suisse Int;
-	font-weight: 900;
-	font-size: 3rem;
-	line-height: 48px;
+	text-transform: uppercase;
+	font-family: 
+	Suisse Int Med;
+	font-size: min(max(30px, 3vw), 62px);
+	line-height: 1em;
+	}
+h1::first-letter,
+em{
+
+		font-family: pixel;
+
+
+
+
 }
 h2 {
-	font-size: 2.15rem;
-	line-height: calc(1.6em + (1.5 - 1.2) * ((100vw - 300px)/(1799 - 300)));
+	font-size: 1.5rem;
 	letter-spacing: .03em;
 	text-align: left;
 	font-weight: 900;
+
 }
-h4 {
-
-
+h4 {	font-family:Suisse Int Med;
+color: black;
+font-weight: 500;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: calc(1rem + (1.5 - 1.2) * ((100vw - 300px)/(1799 - 300)));
+	line-height: calc(1.5em + (1.5 - 1.2) * ((100vw - 300px)/(1799 - 300)));
 }
 h3{
-	font-size: 1.25rem;
-	line-height: 1.5em;
-
+	font-size: 1rem;
+	line-height: 2em;
 }
 h5 {
 
@@ -92,11 +107,7 @@ h5 {
 	font-weight: bold;
 	font-size: 2.25rem;
 }
-h6 {
-
-
-	font-size: 1.25rem;
-}
+h6 {color: black;font-size: 1.05rem;line-height: 1.45em;}
 .dropdown h5 {
 
 
@@ -110,8 +121,9 @@ h6 {
 	background-color: Black;
 	color: white;
 }
-em {
-	font-family: pixel;
+
+.smallname{
+	font-size: .5rem;
 }
 .large-title em {
 	font-size: 7.75vw;
@@ -126,7 +138,6 @@ em {
 }
 .gd-blue{
 	color: #11EDD3;
-	margin-bottom: 3vh;
 }
 
 .number {
@@ -149,20 +160,11 @@ p.poem-style {
 .menu-items h5::first-letter{
 	font-family: pixel;
 }
-}
-@media (max-width: 1799px) and (min-width: 1200px) {
-	h3 {
-		
-		width: 64%;
-	}
-	h2{font-size: 2.5rem;}
-	h1 {
-		font-size: 3.75rem;
-		line-height:1em;
-		margin-bottom: 3vh;
 
-		margin-top: 1vh;
-	}
+@media (max-width: 1799px) and (min-width: 1200px) {
+
+
+
 	.menu-items h5{
 		font-size: 4rem;
 		line-height: 2em;
@@ -171,10 +173,6 @@ p.poem-style {
 }
 
 @media (max-width: 1199px) and (min-width: 899px) {
-	h1 {
-		font-size:1.9rem;
-		line-height:1em;
-	}
 
 	.menu-items h5{
 		font-size: 4rem;
@@ -183,21 +181,13 @@ p.poem-style {
 
 }
 @media (max-width: 898px) and (min-width: 599px) { 
-	h1 {
-		font-size:1.9rem;
-		line-height:1em;
-	}
+
 	.menu-items h5{
 		font-size: 4rem;
 		line-height: 2em;
 	}
 }
 @media (max-width: 598px) and (min-width: 401px) {
-	h1 {
-		font-size:1.9rem;
-		margin-bottom: 3vh;
-		line-height: 1em;
-	} 
 
 	.menu-items h5{
 		font-size: 4rem;
@@ -205,11 +195,7 @@ p.poem-style {
 	}
 }
 @media (max-width: 400px) and (min-width: 0px) {
-	h1 {
-		font-size: 1.75rem;
-		line-height:1em;
-		margin-bottom: 0vh;
-	}
+
 	h5 {
 		font-size: 1rem;
 	}
@@ -224,12 +210,15 @@ p.poem-style {
 
 
 /*Open Grid Structure*/
-
+div{
+	box-sizing: border-box;
+}
 .grid {
 	display:grid;
 	grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
 	grid-auto-rows:1fr;
 	top:0;
+	box-sizing: border-box;
 }
 .grid::before {
 	content:'';
@@ -263,14 +252,17 @@ p.poem-style {
     justify-content: space-evenly;
     background: white;
     flex-direction: row;
-    height: 7vh;
-    position: sticky;
+    position: fixed;
     border-bottom: solid black .15px;
     align-items: flex-end;
     width: 100vw;
     top: 0;
 }
-
+.header,
+.spacer{
+	height: 10%;
+	width:100vw;
+}
 
 svg#Logo_SVG {
     height: 5vh;
@@ -383,7 +375,7 @@ align-items: center;
 }
 
 @media (max-width: 3000px) and (min-width: 1800px) {
-	.header{height: 5vh;}
+
 	li.menu-items.our-pixels-menu-item a:hover{
 		color:#161616;
 		background: #11EDD3;
@@ -418,7 +410,6 @@ align-items: center;
 }
 @media (max-width: 1799px) and (min-width: 1200px) {
 
-	.header{height: 7.2vh;}
 	li.menu-items.our-pixels-menu-item a:hover{
 		color:#161616;
 		background: #11EDD3;
@@ -456,11 +447,7 @@ align-items: center;
 
 }
 @media (max-width: 1199px) and (min-width: 899px) {
-	.header{
-		height: 5vh;
-		grid-column: 1/19;
-		grid-row: 1/2;
-		}
+
 		
 		svg#Logo_SVG {
 			height: 5vh;
@@ -499,11 +486,7 @@ align-items: center;
 
 }
 @media (max-width: 898px) and (min-width: 599px) {
-	.header{
-		height: 9vh;
-		grid-column: 1/15;
-		grid-row: 1/2;
-		}
+
 		svg#Logo_SVG {
 			height: 8vh;
 			width: 16vw;
@@ -511,9 +494,7 @@ align-items: center;
 
 }
 @media (max-width: 598px) and (min-width: 401px) {
-	.header{
-		height: 6.6vh;
-		}
+
 		svg#Logo_SVG {
 			height: 7vh;
 			padding-left: 1rem;
@@ -522,9 +503,7 @@ align-items: center;
 
 }
 @media (max-width: 400px) and (min-width: 0px) {
-	.header{
-		height: 9.3vh;
-		}
+
 		svg#Logo_SVG {
 			height: 10vh;
 			width: 32vw;
@@ -542,35 +521,38 @@ align-items: center;
     flex-direction: column;
     background: white;
     display: flex;
-    grid-column: 1/5;
+    grid-column: 1/3;
 }
-.our-story-header-section,
-.our-pixels-arrow-next{
-	align-items: center;
+.welcome-section,
+.pixels-poem-section,
+.Our-Pixels-Desc-Section.section-global-styles{
+	padding: 4vh 11vw;
 }
+.welcome-section {
+	grid-row: 1/4;
+	justify-content: center;
 
-.welcome-section {grid-row: 1/4;padding: 2vh 8vw 2vh 8vw;}
+	padding: 1vh 4vw 2vh 6vw;
+	}
+	.welcome-section div:first-child{
+		margin-bottom: 5vh;
+	}	
 .our-story-header-section {
-	grid-row: 7/9;
-
+	grid-row: 5/7;
+	padding: 4vh 11vw;
 }
+.our-story-header-section h1{
+	width: 75%;}
 .pixels-poem-section {
 	grid-row: 9/19;
 }
 .our-pixels-arrow-next {
-    grid-row: 5/7;
-    flex-direction: row;
-
-
 }
 .pixels-poem-section {
-	grid-row: 10/16;
+	grid-row: 8/14;
 	padding: 4vh 11vw;
 }
-.our-pixels-arrow-next {
-    grid-row: 5/6;
-	flex-direction: row;
-}
+.our-pixels-arrow-next {grid-row: 1;grid-column: 2/3;padding-left: 8vw;grid-row: 14/15;}
 
 .unknown-symbol{
 	font-family: unknown;
@@ -663,10 +645,10 @@ opacity: 1;
 	.welcome-section {
 		grid-row: 2/7;
 		padding: 6em;
-		grid-column: 2/11;
+		grid-column: 2/14;
 		}
 	.our-story-header-section {
-		grid-row: 9/12;
+		grid-row: 10/13;
 		grid-column: 9/14;
 		grid-column: 3/6;
 		}
@@ -674,7 +656,7 @@ opacity: 1;
 	.our-pixels-arrow-next {
 		grid-row: 8/9;
 		padding: 1em;
-		grid-column: 11/18;
+		grid-column: 12/18;
 		}
 }
 @media (max-width: 2099px) and (min-width: 1900px) {
@@ -781,32 +763,30 @@ opacity: 1;
 
 .smiley_svg {
   display: block;
-  width: 4vw;
-  height: auto;
+  width: 12vw;
+  height: 9vh;max-width: 200%;
 }
 
 .smiley_text {
 	border-radius: 0;
-	visibility: hidden;
-	transition: all ease .3s;
-	background-color: #11EDD3;
-	color: #fff;
-	text-align: 
-	left;
-	height:0vh;
-	top: -20vh;
-	border: black solid 2px;
-	padding: 3vw 1vh;
+visibility: hidden;
+transition: all ease .3s;
+background-color: #11EDD3;
+color: #fff;
+text-align: left;
+height: 0vh;
+top: -8vh;
+border: black solid 2px;
+padding: 3vw 1vh;
+right: 15vw;
+position: absolute;
+z-index: 1;
+width: 36vw;
 
-  /* Position the tooltip */
-	right: 7vw;
-	position: absolute;
-	z-index: 1;
-	width: 100%;
 	}
 
 .smiley_scroll:hover .smiley_text {
-
+	transition: all ease .3s;
   visibility: visible;
   height: auto;
 }
@@ -841,6 +821,14 @@ h2.pixel-perfect{
 /*Our Pixels Close*/ 
 
 /*Footer open*/ 
-
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+  }
 
 /*Footer close*/ 
