@@ -71,7 +71,7 @@ h1 {
 	text-transform: uppercase;
 	font-family: 
 	Suisse Int Med;
-	font-size: min(max(30px, 3vw), 62px);
+	font-size: min(max(32px, 3vw), 62px);
 	line-height: 1em;
 	}
 h1::first-letter,
@@ -526,13 +526,11 @@ align-items: center;
 .welcome-section,
 .pixels-poem-section,
 .Our-Pixels-Desc-Section.section-global-styles{
-	padding: 4vh 11vw;
+	padding: 1vh 4vw 2vh 7vw;
 }
 .welcome-section {
 	grid-row: 1/4;
 	justify-content: center;
-
-	padding: 1vh 4vw 2vh 6vw;
 	}
 	.welcome-section div:first-child{
 		margin-bottom: 5vh;
@@ -625,8 +623,7 @@ opacity: 1;
 		width: 80%;
 	}
 	.our-story-header-section h1{
-		width: 50%;
-	
+		width: 110%;
 		}
 		p.poem-style{
 			width:33%;
@@ -641,7 +638,9 @@ opacity: 1;
 		grid-column: 7/8;}
 	
 
-
+	.our-story-header-section h1{
+		width: 110%;
+		}
 	.welcome-section {
 		grid-row: 2/7;
 		padding: 6em;
@@ -683,48 +682,74 @@ opacity: 1;
 @media (max-width: 1899px) and (min-width: 1500px) {
 	.welcome-section {
 		grid-row: 2/6;
-		grid-column: 2/9;
+		grid-column: 2/10;
 		}
 	.our-story-header-section {
-		grid-row: 9/11;
+		grid-row: 9/12;
+		padding: 4vh 6vw;
 		grid-column: 9/14;
 		grid-column: 2/5;
 		}
 	.pixels-poem-section {
 		grid-row: 9/21;
-		grid-column: 6/11;
+		grid-column: 8/14;
 		padding: 5em;
 		}
 	.our-pixels-arrow-next {
 		grid-row: 7/8;
-
-}}
+		grid-column: 8/13; 
+}
+}
 
 @media (max-width: 1499px) and (min-width: 899px) {
+	.welcome-section,
+.pixels-poem-section,
+.Our-Pixels-Desc-Section.section-global-styles{
+	padding: 1vh 4vw 2vh 7vw;
+}
 	.welcome-section {
 		grid-row: 2/6;
-		grid-column: 2/8;
+		grid-column: 2/9;
 		}
 	.our-story-header-section {
 		grid-row: 9/11;
+		padding: 2vh 3vw;
 		grid-column: 9/14;
 		grid-column: 2/4;
 		}
 	.pixels-poem-section {
-		grid-row: 9/49;
+		grid-row: 9/18;
 		grid-column: 5/9;
 		padding: 5em;
 		}
 	.our-pixels-arrow-next {
 		grid-row: 7/8;
-		grid-column: 4/8;
+		grid-column: 6/9;
 }
 }
-@media (max-width: 898px) and (min-width: 599px) {
+@media (max-width: 898px) and (min-width: 401px) {
+	.section-global-styles{grid-column: 1/5;}
+	.welcome-section {
+		grid-row: 2/6;
+	}
+	.our-story-header-section {
+		grid-row: 9/10;
+		}
+	.pixels-poem-section {
+		grid-row: 10/16;
+		}
+	.our-pixels-arrow-next {
+		grid-row: 7/8;
 	
 }
-@media (max-width: 598px) and (min-width: 401px) {}
-@media (max-width: 400px) and (min-width: 0px) {}
+	
+}
+@media (max-width: 400px) and (min-width: 0px) {
+
+
+
+	
+}
 
 
 /*smiley scroll open*/
@@ -824,11 +849,18 @@ h2.pixel-perfect{
 footer {
 	position: fixed;
 	left: 0;
+	height: 6vh;
+	display: flex;
+	align-items: center;
 	bottom: 0;
+	justify-content: flex-end;
 	width: 100%;
-	background-color: red;
+	background-color:  black;
 	color: white;
 	text-align: center;
-  }
-
+	}
+footer li a{
+	color:white;
+	margin: 4vh 1vw 1vh 7vw;
+}
 /*Footer close*/ 
