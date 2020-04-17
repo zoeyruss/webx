@@ -1329,13 +1329,13 @@ h2.pixel-perfect {
 	}
 	.Our-Pixels-Desc-Section.section-global-styles {
 		grid-row: 1/11;
-		grid-column: 1/5;
+		grid-column: 1/4;
 		padding: 0;
 	}
 	.Our-Pixels-abc-filter {
 		grid-row: 1/2;
 		align-items: center;
-		grid-column: 5/17;
+		grid-column: 4/17;
 		justify-content: space-between;
 		display: flex;
 		height: 100%;
@@ -1348,7 +1348,7 @@ h2.pixel-perfect {
 		font-size: 3rem;
 		margin-bottom: 8vh;
 		border-bottom: solid #161616 .1px;
-		margin-bottom: 4vh;
+		margin-bottom: 2vh;
 		padding: 2.4rem;
 	}
 	
@@ -2341,13 +2341,14 @@ footer{
 	padding: 5vh 2vw;
 	overflow: auto;
 	}
-  .checker-hover img{
-	opacity: 0;
-	transition: ease .5s;
-  }  
-  .checker-hover img:hover{
-	opacity: 1;
-  }  
+a.checker-hover {
+   transition: ease-in-out .3s;
+    color: gray;
+}
+a.checker-hover:hover {
+    color: #11EDD3;
+
+}
   .white-text{
 	  width: 73%;
 	  color: white;
