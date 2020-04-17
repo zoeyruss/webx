@@ -1230,6 +1230,7 @@ h2.pixel-perfect {
 		grid-row: 1/11;
 		grid-column: 1/5;
 		padding: 0;
+		justify-content: flex-start;
 	}
 
 
@@ -2249,7 +2250,7 @@ img.output-arrow {
 	height: 1vh;
 	padding-top:.1vh;
 }
-@media (max-width: 3000px) and (min-width: 1200px) {
+c
 footer li a {
 	color: white;
 	font-size: .75rem;
@@ -2306,6 +2307,7 @@ footer{
 	padding: 0;
 	opacity: .9;
 	height: 60vh;
+	overflow: auto;
 	outline: 0;
 	border: 1px #777 solid;
 	text-align: justify;
@@ -2336,7 +2338,8 @@ footer{
   }
   
   .pop-up-container {
-	padding: 10vh 5vw;
+	padding: 5vh 2vw;
+	overflow: auto;
 	}
   .checker-hover img{
 	opacity: 0;
@@ -2349,6 +2352,11 @@ footer{
 	  width: 73%;
 	  color: white;
 	  margin-bottom: 4vh;
+	  
+	 
+	  /*Open Our Pixels Modual for Mobile*/
+
+
 	 }@-webkit-keyframes example {
 		from {top:-100px;opacity: 0;}
 		to {top:0px;opacity:1;}
@@ -2428,6 +2436,15 @@ footer{
 	  
 	  .white-text{
 		  width: 73%;
+		  text-align: left;
 		  color: white;
 		  margin-bottom: 4vh;
+		 }	  
+		 @media (max-width: 3000px) and (min-width: 1200px) {
+
+			.personal-desc-pop-up{
+	display: none;
+}
+
 		 }
+		 /*Close Our Pixels Modual for Mobile*/
