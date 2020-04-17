@@ -4,13 +4,13 @@
       $('.onchange').text('');
     });
     $('.btn').on('click', function() {
-      $('.change-head').text('Mood');
+      $('.change-head').text('Process');
       $('.onchange').text('');
     });
 
 
     $('.tbtn').on('click', function() {
-      $('.change-head').text('Mood');
+      $('.change-head').text('Outcome');
       $('.onchange').text('');
     });
 
