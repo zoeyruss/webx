@@ -1539,7 +1539,7 @@ div#nav {
 .collapsible {
 	background-color: #777;
 	color: white;
-	cursor: pointer;
+
 	width: 13%;
 	border: none;
 	z-index: 9999;
