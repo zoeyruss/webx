@@ -1577,20 +1577,7 @@ a.image-click img{
 		display: none;
 		transition: ease-in .2s;
 	}
-	.hover-container .one-hover:hover~.one-hover-child {
-		background-color: white;
-		color: white;
-		z-index: 9;
-		opacity: 1;
-		top: 57%;
-		left: 0;
-		transition: ease-in .2s;
-		width: 30vw;
-		overflow: auto;
-		position: absolute;
-		padding: 7vh 1vw 1vh 1vw;
-		display: block;
-	}
+
 	.hover-container .one-hover:hover~.one-hover-child-image {
 		transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: white;

@@ -232,7 +232,8 @@ a.our-pixels-arrow-next.section-global-styles h2 {
 		}
 h1{font-size:3rem}
 }
-	h4{font-size:1.24rem;}}
+	h4{font-size:1.24rem;}
+	}
 
 
 
@@ -243,6 +244,8 @@ h1{font-size:3rem}
 		font-size: 4rem;
 		line-height: 2em;
 	}
+	
+	
 }/* ipad Portrait */
 @media only screen 
   and (min-device-width: 768px) 
@@ -963,7 +966,7 @@ svg#Layer_1 {
 	}
 	.welcome-section {
 		grid-row: 2/6;
-		grid-column: 2/8;
+		grid-column: 2/10;
 	}
 	.our-story-header-section {
 		grid-row: 9/12;
@@ -971,14 +974,14 @@ svg#Layer_1 {
 		padding: 0;
 	}
 	.pixels-poem-section {
-		grid-column: 6/12;
-		grid-row: 9/16;
+		grid-column: 8/14;
+		grid-row: 9/17;
 		padding: 2vh 16vw 0vh 4vw;
 	}
 	.our-pixels-arrow-next {
 		grid-row: 7/8;
 		padding-left: 5vw;
-		grid-column: 8/12;
+		grid-column: 8/14;
 	}
 
 	
@@ -1267,13 +1270,17 @@ a.trigger-see-more:hover {
 	  }
 
 
-	  @media (max-width: 1799px) and (min-width: 1200px) {h1{font-size: 2.5rem;}
+	  @media (max-width: 1799px) and (min-width: 1200px) {h1{font-size: 2.8rem;}
+		h2{
+				font-size: 2.25rem;
+		}
 		h1.white-text {
 			font-size: 2.65rem;
 		}
 		.see-more-popup-box .see-more-popup-content{
 			height: 53vh;
 		}  
+		h6{font-size:1.24em}
 	  }
 	  @media (max-width: 1199px) and (min-width: 769px) {
 		h1.white-text {
@@ -1375,7 +1382,7 @@ a.trigger-see-more:hover {
 	height: auto;
 }
 .display-flex a {
-	display: flex;
+
 	pointer-events: visible;
 }
 h6.name{
@@ -1641,13 +1648,13 @@ h2.pixel-perfect {
 	}
 	.Our-Pixels-Desc-Section.section-global-styles {
 		grid-row: 1/13;
-		grid-column: 1/4;
+		grid-column: 1/5;
 		padding: 0;
 	}
 	.Our-Pixels-abc-filter {
 		grid-row: 1/2;
 		align-items: center;
-		grid-column: 4/14;
+		grid-column: 5/15;
 		justify-content: space-between;
 		display: flex;
 		height: 100%;
@@ -1889,7 +1896,7 @@ a.our-pixels-desc-pop-up-content-on-click img{
 .hover-container img {}
 
 .display-flex {
-	display: flex;
+
 	opacity: .5;
 	height: 100%;
 	transition: ease-in .2s;
@@ -1913,14 +1920,74 @@ a.our-pixels-desc-pop-up-content-on-click img{
 	grid-column: span 2;
 	transition: ease-in .2s;
 }
+
+.hover-container .one-hover:hover~.one-hover-child {
+		background-color: white;
+		color: white;
+		z-index: 9;
+		opacity: 1;
+		top: 57%;
+		left: 0;
+		transition: ease-in .2s;
+		width: 30vw;
+		overflow: auto;
+		position: absolute;
+		padding: 7vh 1vw 1vh 1vw;
+		display: block;
+	}
+	.hover-container .one-hover:hover~.one-hover-child-image {
+		transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		color: white;
+		z-index: 9;
+		opacity: 1;
+		top: 19.5%;
+		left: 3vw;
+		width: 20%;
+		overflow: auto;
+		position: absolute;
+		padding: 7vh 1vw 1vh 1vw;
+		display: block;
+	}
 @media (max-width: 3000px) and (min-width: 1200px) {
+	.one-hover-child-image, .one-hover-child {
+    display: block;
+}
 	.our-pixels-desc-pop-up{
 		display: none;}
+			.hover-container .one-hover-child,
+	.hover-container .one-hover-child-image {
+		opacity: 0;
+		display: none;
+		transition: ease-in .2s;
+	}
 }
 @media (max-width: 1199px) and (min-width: 0px) {
 	.hover-container {
 		display: none;
 }}
+
+@media (max-width: 3000px) and (min-width: 2200px) {}
+
+@media (max-width: 2199px) and (min-width: 1800px) {
+.one-hover-child-image{
+	width: 20%;
+}
+
+	
+}
+@media (max-width: 1799px) and (min-width: 1500px) {
+	.one-hover-child-image{
+	width: 20%;
+	left: 4vw;
+	top:19%;
+}
+
+	.one-hover-child{
+	width: 10%;
+}
+
+
+}
 /*Our-Pixels Description Main Hover grid* Close*/
 /* Open On click pop up our pixels*/
 
@@ -2181,19 +2248,22 @@ button.tbtn.next:hover a{
 	  }
    .process-outcome-btns{top: 5%;height: 10vh;width: 22%;}
 }
-@media (max-width: 1799px) and (min-width: 1500px) {	.process-outcome-btns{top: 4.9%;width: 28%;height: 6rem;}
+@media (max-width: 1799px) and (min-width: 1500px) {	.process-outcome-btns{top: 5.9%;width: 22%;height: 6rem;}
+p{font-size:1.2em;}
  .slide-desc-container {
  height: 200vh;
- width: 28%;
+ width: 22%;
  border-right: solid black .1px;
 }
 .spacer-behind-slide-desc{
 	display:none;
 }
 .change-content-desc-padding {
-    padding: 8vh 2vw;
+    padding: 13vh 2vw;
 }
 
+.slide-desc-container em{
+	font-size:3rem;
 }
 }
 @media (max-width: 1550px) and (min-width: 1200px) {.process-outcome-btns{top: 5.9%;width: 27%;}
