@@ -1647,7 +1647,7 @@ h2.pixel-perfect {
 		justify-content: end;
 	}
 	.Our-Pixels-Desc-Section.section-global-styles {
-		grid-row: 1/13;
+		grid-row: 1/15;
 		grid-column: 1/5;
 		padding: 0;
 	}
@@ -1926,7 +1926,7 @@ a.our-pixels-desc-pop-up-content-on-click img{
 		color: white;
 		z-index: 9;
 		opacity: 1;
-		top: 57%;
+		top: 67%;
 		left: 0;
 		transition: ease-in .2s;
 		width: 30vw;
@@ -1935,14 +1935,15 @@ a.our-pixels-desc-pop-up-content-on-click img{
 		padding: 7vh 1vw 1vh 1vw;
 		display: block;
 	}
+
 	.hover-container .one-hover:hover~.one-hover-child-image {
 		transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 		color: white;
 		z-index: 9;
 		opacity: 1;
-		top: 19.5%;
-		left: 3vw;
-		width: 20%;
+		top: 22%;
+		left: 4vw;
+		width: 21%;
 		overflow: auto;
 		position: absolute;
 		padding: 7vh 1vw 1vh 1vw;
@@ -1976,12 +1977,11 @@ a.our-pixels-desc-pop-up-content-on-click img{
 	
 }
 @media (max-width: 1799px) and (min-width: 1500px) {
-	.one-hover-child-image{
-	width: 20%;
-	left: 4vw;
-	top:19%;
-}
 
+	.one-hover-child-image {
+		top: 26.5%;
+left: 3.5vw;
+width: 20%;}
 	.one-hover-child{
 	width: 10%;
 }
