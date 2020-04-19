@@ -2204,12 +2204,14 @@ h6.padding-text {
 }
 .slide-desc-container em {
   font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .process-outcome-btns {
   position: fixed;
   background: white;
-  top: 32%;
+  top: 13rem;
+  padding: 0rem;
   height: 4rem;
   justify-content: space-between;
   display: flex;
@@ -2316,7 +2318,7 @@ button.tbtn.next:hover a {
 }
 @media (max-width: 1499px) and (min-width: 1200px) {
   .slide-desc-container em {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
   .slide-desc-container {
     height: 200vh;
@@ -2327,11 +2329,11 @@ button.tbtn.next:hover a {
     display: none;
   }
   .change-content-desc-padding {
-    padding: 15vh 2vw;
+    padding: 17vh 2vw;
   }
   .process-outcome-btns {
     top: 3.8rem;
-    height: 6rem;
+    height: 4rem;
     width: 23%;
   }
 }
@@ -2349,7 +2351,7 @@ button.tbtn.next:hover a {
 }
 @media (max-width: 768px) and (min-width: 601px) {
   .process-outcome-btns {
-    top: 23%;
+    top: 13rem;
     height: 3.25rem;
   }
   .spacer-behind-slide-desc,
@@ -2363,7 +2365,7 @@ button.tbtn.next:hover a {
 }
 @media (max-width: 600px) and (min-width: 376px) {
   .process-outcome-btns {
-    top: 32%;
+    top: 17rem;
   }
   .spacer-behind-slide-desc,
   .slide-desc-container {
@@ -2805,7 +2807,7 @@ a.left.cursor-prev.carousel-control {
   }
 
   .carousel-inner {
-    width: 87%;
+    width: 63%;
   }
   .carousel-control.right,
   .carousel-control.left {
@@ -2822,7 +2824,7 @@ a.left.cursor-prev.carousel-control {
     grid-column: 1/6;
   }
   .carousel-inner {
-    width: 52%;
+    width: 78%;
   }
   .carousel-control.right,
   .carousel-control.left {
@@ -2844,7 +2846,7 @@ a.left.cursor-prev.carousel-control {
 @media (max-width: 600px) and (min-width: 376px) {
   div#carousel-1,
   div#carousel-2 {
-    grid-column: 1/4;
+    grid-column: 1/5;
   }
 
   div#carousel-1 {
@@ -2853,6 +2855,9 @@ a.left.cursor-prev.carousel-control {
   }
   div#carousel-2 {
     grid-row: 7/11;
+  }
+  .carousel-inner {
+    width: 52%;
   }
 }
 @media (max-width: 375px) and (min-width: 0px) {
