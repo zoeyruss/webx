@@ -842,7 +842,7 @@ a.landing-page-arrow {
 
 @media (max-width: 1799px) and (min-width: 1200px) {
   .large-title em {
-    font-size: 17.2rem;
+    font-size: 14.2rem;
     letter-spacing: 0.09em;
   }
   .landing-page {
@@ -852,7 +852,7 @@ a.landing-page-arrow {
     margin-left: 11vw;
   }
   .large-title {
-    font-size: 17rem;
+    font-size: 14rem;
     width: 100%;
     line-height: 0.9em;
   }
