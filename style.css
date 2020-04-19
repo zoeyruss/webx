@@ -316,7 +316,7 @@ a.our-pixels-arrow-next.section-global-styles h2 {
     width: 33%;
   }
   .welcome-section.section-global-styles h6 {
-    width: 61%;
+    width: 65%;
   }
   h6 {
     font-size: 1.25rem;
@@ -968,7 +968,7 @@ svg#Layer_1 {
   .welcome-section {
     grid-row: 2/7;
     padding: 6em;
-    grid-column: 3/14;
+    grid-column: 3/13;
   }
   .our-story-header-section {
     grid-row: 10/13;
@@ -1014,7 +1014,7 @@ svg#Layer_1 {
   }
 }
 
-@media (max-width: 1799px) and (min-width: 1500px) {
+@media (max-width: 1799px) and (min-width: 1676px) {
   .section-global-styles {
     grid-column: 1/4;
   }
@@ -1038,7 +1038,59 @@ svg#Layer_1 {
     grid-column: 8/13;
   }
 }
-@media (max-width: 1499px) and (min-width: 1200px) {
+@media (max-width: 1675px) and (min-width: 1525px) {
+  .section-global-styles {
+    grid-column: 1/4;
+  }
+  .welcome-section {
+    grid-row: 2/6;
+    grid-column: 2/8;
+  }
+  .our-story-header-section {
+    grid-row: 9/11;
+    grid-column: 2/4;
+    padding: 0;
+  }
+  .pixels-poem-section {
+    grid-column: 7/12;
+    grid-row: 9/16;
+    padding: 2vh 16vw 0vh 4vw;
+  }
+  .our-pixels-arrow-next {
+    grid-row: 7/8;
+    padding-left: 5vw;
+    grid-column: 7/12;
+  }
+}
+@media (max-width: 1524px) and (min-width: 1300px) {
+  .section-global-styles {
+    grid-column: 1/4;
+  }
+  .welcome-section {
+    grid-row: 2/6;
+    grid-column: 2/9;
+  }
+  .our-story-header-section {
+    grid-row: 9/11;
+    grid-column: 2/4;
+    padding: 0;
+  }
+  .pixels-poem-section {
+    grid-column: 5/10;
+    grid-row: 9/16;
+  }
+  .our-pixels-arrow-next {
+    grid-row: 7/8;
+    padding-left: 5vw;
+    grid-column: 5/10;
+  }
+  .welcome-section,
+  .pixels-poem-section,
+  .Our-Pixels-Desc-Section.section-global-styles {
+    padding: 2vh 3vw 0vh 4vw;
+  }
+}
+@media (max-width: 1299px) and (min-width: 1200px) {
   .section-global-styles {
     grid-column: 1/4;
   }
@@ -1068,7 +1120,7 @@ svg#Layer_1 {
 }
 @media (max-width: 1199px) and (min-width: 769px) {
   .section-global-styles {
-    grid-column: 1/9;
+    grid-column: 1/10;
   }
   .welcome-section {
     grid-row: 1/4;
