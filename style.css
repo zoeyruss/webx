@@ -803,14 +803,13 @@ a.landing-page-arrow {
     margin-left: 9vw;
   }
   .large-title em {
-    font-size: 24rem;
+    font-size: 15rem;
     letter-spacing: 0.09em;
   }
   .large-title {
-    font-size: 23rem;
+    font-size: 15rem;
     width: 100%;
     line-height: 0.9em;
-
     padding: 3rem;
   }
   .landing-page {
@@ -842,7 +841,7 @@ a.landing-page-arrow {
 
 @media (max-width: 1799px) and (min-width: 1200px) {
   .large-title em {
-    font-size: 14.2rem;
+    font-size: 12.2rem;
     letter-spacing: 0.09em;
   }
   .landing-page {
@@ -852,7 +851,7 @@ a.landing-page-arrow {
     margin-left: 11vw;
   }
   .large-title {
-    font-size: 14rem;
+    font-size: 12rem;
     width: 100%;
     line-height: 0.9em;
   }
@@ -862,17 +861,17 @@ a.landing-page-arrow {
 }
 @media (max-width: 1199px) and (min-width: 769px) {
   .large-title em {
-    font-size: 12rem;
+    font-size: 11rem;
     letter-spacing: 0.09em;
   }
   .landing-page {
-    padding: 1vh 25vw 1vh 4vw;
+    padding: 1vh 10vw 1vh 4vw;
   }
   a.landing-page-arrow {
     margin-left: 11vw;
   }
   .large-title {
-    font-size: 11.5rem;
+    font-size: 10.75rem;
     width: 100%;
     line-height: 0.9em;
   }
@@ -2754,7 +2753,7 @@ a.left.cursor-prev.carousel-control {
   }
 
   .carousel-inner {
-    width: 52%;
+    width: 87%;
   }
   .carousel-control.right,
   .carousel-control.left {
