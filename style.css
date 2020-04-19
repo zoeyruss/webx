@@ -2141,7 +2141,7 @@ h6.padding-text {
 }
 .spacer-behind-slide-desc,
 .slide-desc-container {
-  height: 32vh;
+  height: 29vh;
 }
 .slide-desc-container {
   position: fixed;
@@ -2159,7 +2159,7 @@ h6.padding-text {
   position: fixed;
   background: white;
   top: 32%;
-  height: 3rem;
+  height: 4rem;
   justify-content: space-between;
   display: flex;
   width: 100vw;
@@ -2533,7 +2533,7 @@ div#carousel-2 {
   justify-content: center;
   align-items: center;
   height: 88vh;
-  bottom: 4vh;
+  bottom: 3vh;
   padding-bottom: -1vh;
 }
 
