@@ -486,6 +486,7 @@ div {
 .spacer {
   height: 4rem;
   z-index: 9;
+  z-index: 999;
   background: white;
   width: 100vw;
 }
@@ -803,11 +804,11 @@ a.landing-page-arrow {
     margin-left: 9vw;
   }
   .large-title em {
-    font-size: 15rem;
+    font-size: 20rem;
     letter-spacing: 0.09em;
   }
   .large-title {
-    font-size: 15rem;
+    font-size: 20rem;
     width: 100%;
     line-height: 0.9em;
     padding: 3rem;
